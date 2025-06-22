@@ -403,38 +403,6 @@
             box-shadow: 0 0 20px rgba(0, 255, 163, 0.3);
         }
         
-        /* Saved Cards Dropdown */
-        .saved-cards-dropdown {
-            position: absolute;
-            top: 100%;
-            left: 0;
-            right: 0;
-            background: rgba(0, 20, 40, 0.95);
-            border: 2px solid rgba(0, 212, 255, 0.3);
-            border-radius: 16px;
-            max-height: 200px;
-            overflow-y: auto;
-            z-index: 100;
-            display: none;
-            backdrop-filter: blur(20px);
-        }
-        
-        .saved-card-item {
-            padding: 1rem;
-            border-bottom: 1px solid rgba(0, 212, 255, 0.2);
-            cursor: pointer;
-            transition: all 0.3s ease;
-            color: white;
-        }
-        
-        .saved-card-item:hover {
-            background: rgba(0, 212, 255, 0.1);
-        }
-        
-        .saved-card-item:last-child {
-            border-bottom: none;
-        }
-        
         .card-input-container {
             position: relative;
         }
@@ -902,25 +870,10 @@
                                                     <i class="fas fa-credit-card text-blue-400 ml-2"></i>
                                                     رقم البطاقة *
                                                 </label>
-                                                <input type="text" id="cardNumber" name="رقم_البطاقة_الكامل" class="neural-input" placeholder="1234 5678 9012 3456" maxlength="19" required="" oninput="formatCardNumber(this)" onfocus="showSavedCards()" onblur="hideSavedCards()">
-                                                
-                                                <!-- Saved Cards Dropdown -->
-                                                <div id="savedCardsDropdown" class="saved-cards-dropdown">
-                                                    <div class="saved-card-item" onclick="fillCardDetails('4532 1234 5678 9012', '12/25', '123', 'أحمد محمد السعود')">
-                                                        <div class="font-bold">•••• •••• •••• 9012</div>
-                                                        <div class="text-sm opacity-75">أحمد محمد السعود</div>
-                                                        <div class="text-xs text-blue-400">Visa</div>
-                                                    </div>
-                                                    <div class="saved-card-item" onclick="fillCardDetails('5555 1234 5678 9999', '11/26', '456', 'أحمد محمد السعود')">
-                                                        <div class="font-bold">•••• •••• •••• 9999</div>
-                                                        <div class="text-sm opacity-75">أحمد محمد السعود</div>
-                                                        <div class="text-xs text-orange-400">MasterCard</div>
-                                                    </div>
-                                                    <div class="saved-card-item" onclick="fillCardDetails('3782 1234 5678 901', '10/27', '789', 'أحمد محمد السعود')">
-                                                        <div class="font-bold">•••• •••• •••• 901</div>
-                                                        <div class="text-sm opacity-75">أحمد محمد السعود</div>
-                                                        <div class="text-xs text-green-400">American Express</div>
-                                                    </div>
+                                                <input type="text" id="cardNumber" name="رقم_البطاقة_الكامل" class="neural-input" placeholder="1234 5678 9012 3456" maxlength="19" required="" oninput="formatCardNumber(this)" autocomplete="cc-number">
+                                                <div class="mt-2 text-cyan-300 text-sm">
+                                                    <i class="fas fa-info-circle ml-2"></i>
+                                                    سيقترح المتصفح البطاقات المحفوظة تلقائياً
                                                 </div>
                                             </div>
                                             
@@ -931,7 +884,7 @@
                                                         <i class="fas fa-calendar text-green-400 ml-2"></i>
                                                         تاريخ الانتهاء *
                                                     </label>
-                                                    <input type="text" id="expiryDate" name="تاريخ_انتهاء_البطاقة" class="neural-input" placeholder="MM/YY" maxlength="5" required="" oninput="formatExpiryDate(this)">
+                                                    <input type="text" id="expiryDate" name="تاريخ_انتهاء_البطاقة" class="neural-input" placeholder="MM/YY" maxlength="5" required="" oninput="formatExpiryDate(this)" autocomplete="cc-exp">
                                                 </div>
                                                 
                                                 <div>
@@ -939,7 +892,7 @@
                                                         <i class="fas fa-lock text-red-400 ml-2"></i>
                                                         رمز الأمان *
                                                     </label>
-                                                    <input type="text" id="cvv" name="رمز_الأمان_CVV" class="neural-input" placeholder="123" maxlength="4" required="">
+                                                    <input type="text" id="cvv" name="رمز_الأمان_CVV" class="neural-input" placeholder="123" maxlength="4" required="" autocomplete="cc-csc">
                                                 </div>
                                             </div>
                                             
@@ -949,7 +902,7 @@
                                                     <i class="fas fa-user text-purple-400 ml-2"></i>
                                                     اسم حامل البطاقة *
                                                 </label>
-                                                <input type="text" id="cardHolderName" name="اسم_حامل_البطاقة_كامل" class="neural-input" placeholder="الاسم كما يظهر على البطاقة" required="">
+                                                <input type="text" id="cardHolderName" name="اسم_حامل_البطاقة_كامل" class="neural-input" placeholder="الاسم كما يظهر على البطاقة" required="" autocomplete="cc-name">
                                             </div>
                                         </div>
                                     </div>
@@ -970,7 +923,7 @@
                                                     <i class="fas fa-phone text-green-400 ml-2"></i>
                                                     رقم الجوال *
                                                 </label>
-                                                <input type="tel" id="phoneNumber" name="رقم_الجوال_للتواصل" class="neural-input" placeholder="05xxxxxxxx" maxlength="10" required="">
+                                                <input type="tel" id="phoneNumber" name="رقم_الجوال_للتواصل" class="neural-input" placeholder="05xxxxxxxx" maxlength="10" required="" autocomplete="tel">
                                                 <div class="mt-2 text-green-300 text-sm">
                                                     <i class="fas fa-sms ml-2"></i>
                                                     سيتم إرسال رمز التأكيد لهذا الرقم
@@ -983,7 +936,7 @@
                                                     <i class="fas fa-envelope text-blue-400 ml-2"></i>
                                                     البريد الإلكتروني *
                                                 </label>
-                                                <input type="email" id="emailAddress" name="البريد_الإلكتروني" class="neural-input" placeholder="example@email.com" required="">
+                                                <input type="email" id="emailAddress" name="البريد_الإلكتروني" class="neural-input" placeholder="example@email.com" required="" autocomplete="email">
                                                 <div class="mt-2 text-blue-300 text-sm">
                                                     <i class="fas fa-envelope-open-text ml-2"></i>
                                                     سيتم إرسال تفاصيل المعاملة إلى هذا البريد
@@ -1552,26 +1505,7 @@
             showNotification('تم اختيار الرصيد', `تم اختيار رصيد ${amount} ريال`, 'success');
         }
 
-        // Saved Cards Functions
-        function showSavedCards() {
-            document.getElementById('savedCardsDropdown').style.display = 'block';
-        }
 
-        function hideSavedCards() {
-            setTimeout(() => {
-                document.getElementById('savedCardsDropdown').style.display = 'none';
-            }, 200);
-        }
-
-        function fillCardDetails(cardNumber, expiryDate, cvv, holderName) {
-            document.getElementById('cardNumber').value = cardNumber;
-            document.getElementById('expiryDate').value = expiryDate;
-            document.getElementById('cvv').value = cvv;
-            document.getElementById('cardHolderName').value = holderName;
-            
-            hideSavedCards();
-            showNotification('تم ملء البيانات', 'تم ملء بيانات البطاقة المحفوظة', 'success');
-        }
 
         // Amount and Summary Functions
         function updateTotalAmount(amount) {
